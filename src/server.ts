@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from "express";
 import path from "path";
 import fs from "fs";
 import multer, { FileFilterCallback } from "multer";
+import { transcriptVideo } from "./utils/api";
 
 const app = express();
 
@@ -55,7 +56,7 @@ const upload = multer({
 app.post(
   "/api/upload",
   upload.single("video"),
-  (req: Request, res: Response) => {
+  async (req: Request, res: Response, next: NextFunction) => {
     console.log("deu certo!");
 
     if (!req.file) {
@@ -65,16 +66,22 @@ app.post(
       return;
     }
 
-    res.status(201).json({
-      message: "Upload realizado com sucesso.",
-      file: {
-        originalName: req.file.originalname,
-        savedName: req.file.filename,
-        mimeType: req.file.mimetype,
-        sizeBytes: req.file.size,
-        savedPath: req.file.path,
-      },
-    });
+    try {
+      await transcriptVideo(req.file.path);
+
+      res.status(201).json({
+        message: "Upload realizado com sucesso.",
+        file: {
+          originalName: req.file.originalname,
+          savedName: req.file.filename,
+          mimeType: req.file.mimetype,
+          sizeBytes: req.file.size,
+          savedPath: req.file.path,
+        },
+      });
+    } catch (err) {
+      next(err);
+    }
   }
 );
 

@@ -1,14 +1,14 @@
 {
   "task": "transcribe",
   "language": "Portuguese",
-  "duration": 399.455918,
-  "text": " Olá pessoal, sejam bem-vindos a mais um vídeo do canal. No vídeo de hoje eu vou estar mostrando a vocês como baixar e instalar o FFmpeg, que para quem não conhece é um programa que é utilizado para fazer conversão de vídeo e áudio. Então ele é muito utilizado para que a gente possa converter geralmente de um arquivo para outro. Inclusive o ABS utiliza o FFmpeg para fazer codificação de vídeo. E vários serviços de streaming, programas que lidam com vídeo, imagens, utilizam o FFmpeg. Então é bem útil ter o FFmpeg instalado no Windows para que a gente possa utilizar para fazer alguma tarefa. Então vamos baixar aqui o FFmpeg e vou mostrar a vocês como instalar para que vocês possam ter acesso através do terminal. Então, para que a gente possa baixar o FFmpeg, a gente vai ter que pesquisar por FFmpeg, e a gente vai vir para o site oficial, que é o ffmpeg.org, que a gente vai ver algumas opções, a gente vai clicar aqui em Download, ok? Nessa aba Download, a gente aqui vai ver a versão Windows, e a gente pode baixar de duas fontes, do dian.dev e do btbn. Eu vou baixar do btbn, então a gente vai vir aqui, a gente está no GitHub, onde a gente pode baixar o arquivo para download, esse arquivo aqui de 143 MB, ok? A gente vai fazer o download, e teve uma atualização hoje, né? Como vocês podem ver. Então, a gente vai fazer o download desse arquivo, que já foi efetuado, agora a gente vai extrair esse arquivo utilizando aqui o setzip. Então aqui a gente tem, a gente vai apagar o arquivo zip Vou renomear apenas para ffmpeg, então a gente tem essa pasta Bem, para que a gente possa adicionar ao terminal Vou abrir aqui o terminal, a gente vai digitar ffmpeg E a gente pode ver que ffmpeg não é reconhecido como comando interno Porque aqui a gente vai ter que atualizar esse arquivo Nas variáveis de ambiente Então a gente já tem essa pasta, agora a gente vai ter que mover essa pasta O local que vocês podem colocar essa pasta é no descolocar o C Vocês podem colar aqui, então a gente aqui vai ter essa pasta Feito isso, agora a gente vai abrir as variáveis de ambiente Vocês podem abrir o menu do Windows e digitar apenas env A gente vai ver aqui o menu para que a gente possa editar as variáveis de ambiente a gente vai clicar aqui a gente vai copiar essa pasta essa dois pontos barra ffmpeg barra bin a gente vai copiar esse endere a gente vai vir aqui novamente em path a gente vai editar e a gente vai clicar aqui em novo e adicionar agora a gente adicionou aqui o ffmpeg as vari de ambiente a gente vai clicar em ok ok e ok se a gente executar aqui o comando cmd a gente deve ver aqui o ffmpeg com sucesso ent aqui a gente pode ver que o ffmpeg foi instalado com sucesso Agora para os fins demonstrativos eu vou mostrar a voc como utilizar o FFmpeg para converter um arquivo de v MP4 para um formato que utilize menos dados Então a gente vai ver aqui em vídeos, eu renomeei para input para que fique mais fácil. Mas vocês também podem passar o endereço do arquivo em entre aspas duplas. A gente vai ver esse vídeo que basicamente é o vídeo do Sora. Se a gente vir em propriedades, a gente vai ver que esse vídeo tem uma taxa de bitrate de mais ou menos 2500. Só que aqui é uma taxa de bitrate variável. Então a gente vai converter esse vídeo para uma taxa de bits menor e a gente vai ver isso em tempo real. A gente também poderia diminuir a resolução, alterar o FPS e várias outras coisas. A gente vai ver aqui o terminal, cmd, executar o comando cdvideos, e a gente vai ver esse vídeo, a gente vai executar o comando dur, e a gente vai ver aqui o vídeo, input.mp4. Agora a gente vai digitar o comando, que basicamente começa com ffmpeg, menos i de input, input.mp4. A gente vai definir aqui menos c, 2 pontos v, que no caso seria a entrada. No caso, o codec que a gente vai estar utilizando, que vai ser, nesse primeiro exemplo, vai ser o x264, que é um qualificador de CPU, muito utilizado no passado, só que agora é mais comum utilizar o GPU, já que na GPU é muito mais rápido. A gente vai usar o preset fast, que é rápido, que a gente vai definir a taxa de bitrate, menos B, 2 pontos V. A taxa de bitrate a gente vai fazer com que seja 1.500 KB, ok? Constantes. A gente vai definir o buffer size, o buffer size, de 6.000. E a gente vai definir aqui um arquivo output, e vamos nomear aqui x264.mp4. Então, executando esse comando, a gente vai estar convertendo, utilizando o processador, a gente pode ver o uso de CPU em tempo real. A gente pode ver aqui todos os cores trabalhando para fazer a conversão desse vídeo. Inclusive, a gente pode ver o FPS atual, né? Está fazendo essa tarefa, utilizando na velocidade de 134 FPS, que é mais ou menos aí 4 vezes a velocidade real. E esse preset fast é um preset relativamente rápido. A gente pode ver aqui que está tentando manter o bitrate de 1500, né? Para live streaming, geralmente, no OBS, a gente utiliza 6000, né? Quando se trata de fazer lives para Twitch. E o Codec X264 tem algumas vantagens e outras desvantagens em comparação ao H264, que seria o codificador de hardware. S que a gente tamb pode utilizar o FFmpeg para fazer outras coisas t Inclusive a gente pode alterar o FPS de um v a gente pode pegar uma sequ de imagens e converter um v Ent muito ter essa biblioteca para que voc possam ter acesso f n Essa biblioteca realmente muito para v situa Vamos ver aqui, eu acho que está quase terminando. Na verdade, já vai em 5 minutos, o vídeo tem 10 minutos. Então, o vídeo tem mais ou menos 10 minutos. A gente pode ver aqui, o tempo decorrido vai em 6 minutos. Vai demorar um pouco. Quando a gente estiver utilizando a placa de vídeo, deve ser um pouco mais rápido. Então, vocês estão vendo aqui todos os Nukios trabalhando. Inclusive, já estou utilizando a placa de vídeo para fazer codificação de vídeo. Essa parte aqui que vocês estão vendo é da própria gravação do vídeo que vocês estão vendo agora. Então quando a gente estiver fazendo a codificação via o NVEN, que é o codificador da NVIDIA, a gente também vai estar utilizando ainda mais esse codificador. Só que isso não deve ser um problema, já que esse codificador é muito otimizado, já que é um hardware dedicado para fazer essa tarefa, a gente não deve encontrar nenhum problema. Vamos ver aqui, está chegando já no final. Depois a gente pode fazer uma comparação de imagem. Para que a gente possa comparar a imagem, a gente vai utilizar o YCAT. Eu vou fazer a configuração idêntica, a configuração do codificador H.264 vai ser idêntica, para que a gente possa comparar, vai ser os mesmos 1500. Então a gente já fez aqui no caso a conversão A gente pode ver aqui o arquivo Ficou mais ou menos a metade Mais ou menos a metade com o benchmark constante A qualidade da imagem ainda é boa Depende bastante do preset que a gente estiver utilizando Já que a gente está usando o FAS Vai ter um pouco mais de compressão Alguns artefatos de compressão Ok, a qualidade já ficou bacana Já que o arquivo vai ter um benchmark constante Agora a gente vai fazer com o H.264 A gente vai limpar a tela A gente vai começar com FFmpeg A-I, A-I Input.mp4 Menos C, barra B A gente vai usar aqui H.264 H.264 Underscore anything O preset a gente pode utilizar o P4 ou P5 Vou usar o P5 que é um preset bacana Menos V, a menos BV, vai ser 1500K E o Buff Size vai ser 6000 E a saída vai ser Output H264.mp4 Então, ok, não achei P5, né? P5 não existe Vamos lá, menos preset, decidi passar o preset Ok a gente pode ver que a velocidade aqui est em 5 Est um pouco mais r vamos ver qual o uso da placa de v A gente est usando bastante o quadrificador de v voc podem ver aqui que agora t em 100 t usando um pouco do processador provavelmente pra fazer a dedo de quadrifica do arquivo de v n agora tá realmente em 100% a placa de vídeo fazendo essa compressão. Se a gente alterasse o preset de P5 para P4 ou P3, a gente alcançaria uma velocidade melhor, a gente tá tentando manter uma boa qualidade de imagem. A gente pode ver que aqui a gente ainda tá mais rápido, que o preset X2004 test em CPU, a gente ainda vai pegar mais ou menos 4.5x, agora a gente tá mais ou menos em 5.9, Então a gente ainda está com uma qualificação mais rápida E a gente provavelmente vai conseguir uma qualidade de imagem melhor Utilizando a placa de vídeo para fazer esse trabalho Então já está chegando em 6 minutos E a gente vai estar utilizando aqui o iCat Que é um programa da NVIDIA Que eu recomendo que vocês utilizem Se vocês quiserem comparar imagens e vídeos Geralmente é utilizado para comparar arquivos de vídeo Para que a gente possa ver diferenças na qualidade visual É um programa muito bom Eu recomendo que vocês realmente utilizem Se vocês quiserem fazer esse tipo de teste Então a gente está chegando no final Já vai em 9 minutos Então o vídeo tem 10 minutos A gente já está quase no final Está chegando no final Feito Então a gente aqui tem um arquivo Esse arquivo aqui Se a gente abrir A gente pode ver aqui a qualidade visual E para que a gente possa ver lado a lado Primeiro vamos abrir o X264 E vamos selecionar aqui o H264 A gente também pode selecionar a entrada No caso o arquivo original Então a gente tem comparação completa Se a gente reproduzir o arquivo A gente pode ver A gente tem que lembrar que aqui é o original O H264 e o X264 Em algumas partes eu acho que Se eu ver aqui O X264 e o H264 são bem comparáveis Principalmente nessa qualidade visual Quando a gente tira o zoom assim A gente pode ver que ainda ficam São bem comparáveis Se a gente pausar aqui A gente pode ver que ambos Os codecs são bem comparáveis Só que utilizando a placa de vídeo É muito mais eficiente A gente pode ver aqui a diferença visual O H2004 parece ter um pouco mais de qualidade Do que o X2004, mas mesmo assim Acho que são bem comparáveis E aqui a gente pode ver o arquivo original, que não tem uma taxa de bitrate constante E a gente pode ver mais ou menos as diferenças em qualidade E eu acho que ficou bacana Então basicamente esse é o tutorial, pessoal Se vocês gostaram desse vídeo, não esquece de deixar o like Se inscrever, isso ajuda bastante o canal E vejo vocês no próximo vídeo",
+  "duration": 399.52431249999995,
+  "text": " Olá pessoal, sejam bem-vindos a mais um vídeo do canal. No vídeo de hoje eu vou estar mostrando a vocês como baixar e instalar o FFmpeg, que para quem não conhece é um programa que é utilizado para fazer conversão de vídeo e áudio. Então ele é muito utilizado para que a gente possa converter geralmente de um arquivo para outro. Inclusive o ABS utiliza o FFmpeg para fazer codificação de vídeo. E vários serviços de streaming, programas que lidam com vídeo, imagens, utilizam o FFmpeg. Então é bem útil ter o FFmpeg instalado no Windows para que a gente possa utilizar para fazer alguma tarefa. Então vamos baixar aqui o FFmpeg e vou mostrar a vocês como instalar para que vocês possam ter acesso através do terminal. Então, para que a gente possa baixar o FFmpeg, a gente vai ter que pesquisar por FFmpeg, e a gente vai para o site oficial, que é o ffmpeg.org, que a gente vai ver algumas opções, a gente vai clicar aqui em Download, ok? Nessa aba Download, a gente aqui vai ver a versão Windows, e a gente pode baixar de duas fontes, do dian.dev e do btbn. Eu vou baixar do btbn, então a gente vai vir aqui, a gente está no GitHub, onde a gente pode baixar o arquivo para download, esse arquivo aqui de 143 MB, ok? A gente vai fazer o download, e teve uma atualização hoje, né, como vocês podem ver. Então a gente vai fazer o download desse arquivo que já foi efetuado Agora a gente vai extrair esse arquivo utilizando aqui o setZ Então aqui a gente tem, a gente vai apagar o arquivo Z Vou renomear apenas para ffmpeg, então a gente tem essa pasta Bem, para que a gente possa adicionar ao terminal Vou abrir aqui o terminal, a gente vai digitar ffmpeg E a gente pode ver que ffmpeg não é reconhecido como comando interno Porque aqui a gente vai ter que atualizar esse arquivo Nas variáveis de ambiente, então a gente já tem essa pasta Agora a gente vai ter que mover essa pasta E o local que vocês podem colocar essa pasta é no disco local C Vocês podem colar aqui, então a gente aqui vai ter essa pasta Feito isso, agora a gente vai abrir as variáveis do ambiente vocês podem abrir o menú do Windows e digitar apenas ENVY. A gente vai ver aqui o menu para editar as variáveis em ambiente, a gente vai clicar aqui, a gente vai copiar essa pasta, esse adesivo, barra FFNPeg, barra BIM. A gente vai copiar esse endereço. A gente vai vir aqui novamente em Path, a gente vai editar, a gente vai clicar aqui em Novo e Adicionar. Agora a gente adicionou aqui o FFNPeg, as variáveis de Ambiente. A gente vai clicar em OK, OK e OK, se a gente executar aqui o comando CMD a gente deve ver aqui o FFNPeg com sucesso Ent aqui a gente pode ver que o FFNPeg foi instalado com sucesso Agora para os fins demonstrativos eu vou mostrar a voc como utilizar o FFmpeg para converter um arquivo de v MP4 para um formato que utilize menos dados Então a gente vai vir aqui em vídeos, renomeei para input para que fique mais fácil, mas vocês também podem passar o endereço do arquivo em entre aspas duplas. A gente vai ver esse vídeo que basicamente é o vídeo do Sora, se a gente vir em propriedades, a gente vai ver que esse vídeo tem uma taxa de bitrate de mais ou menos 2500. Só que aqui é uma taxa de bitrate variável, então a gente vai converter esse vídeo para uma taxa de bits menor e a gente vai ver isso em tempo real. A gente também poderia diminuir a resolução, alterar o FPS e várias outras coisas. A gente vai ver aqui o terminal, cmd, vai executar o comando cdvideos, e a gente vai ver esse vídeo, a gente vai executar o comando dur, e a gente vai ver aqui o vídeo, input.mp4. Agora a gente vai digitar o comando, que basicamente começa com ffmpeg, menos i de input, input.mp4. A gente vai definir aqui menos c, dois pontos v, que no caso seria a entrada. No caso, o codec que a gente vai estar utilizando, que vai ser, nesse primeiro exemplo, vai ser o x264, que é um qualificador de CPU, muito utilizado no passado, só que agora é mais comum utilizar a GPU, já que na GPU é muito mais rápido. A gente vai usar o preset fast, que é rápido, A taxa de bitrate a gente vai fazer com que seja 1500 KB, ok? Constantes. A gente vai definir o buffer size, o buffer size de 6000. E a gente vai definir aqui um arquivo output, vamos nomear aqui x264.mp4. Então, executando esse comando, a gente vai estar convertendo, utilizando o processador. A gente pode ver o uso de CPU em tempo real. A gente pode ver aqui todos os cores trabalhando para fazer a conversão deste vídeo. Inclusive, a gente pode ver o FPS atual, né? Está fazendo essa tarefa utilizando na velocidade de 134 FPS, que é mais ou menos aí 4 vezes a velocidade real. E esse preset fast é um preset relativamente rápido. A gente pode ver aqui que está tentando manter o bitrate de 1500, né? Para live streaming, geralmente, no EBS, a gente utiliza 6.000, quando se trata de fazer lives para Twitch. E o Codec X264 tem algumas vantagens e outras desvantagens em comparação ao H.264, que seria o codificador de hardware. S que a gente tamb pode utilizar o FFmpeg para fazer outras coisas Inclusive a gente pode alterar o FPS de um v a gente pode pegar uma sequ de imagens e converter um v Ent muito ter essa biblioteca para que voc possam ter acesso f Essa biblioteca realmente muito para v situa Vamos ver aqui. Eu acho que está quase terminando. Na verdade, já vai em 5 minutos. O vídeo tem 10 minutos. Então o vídeo tem mais ou menos 10 minutos. A gente pode ver aqui o tempo decorrido. Vai em 6 minutos. Vai demorar um pouco. Quando a gente estiver utilizando a placa de vídeo, deve ser um pouco mais rápido. Então vocês estão vendo aqui todos os Nukios trabalhando. Inclusive já estou utilizando a placa de vídeo para fazer codificação de vídeo. Essa parte aqui que vocês estão vendo é da própria gravação do vídeo que vocês estão vendo agora. Então quando a gente estiver fazendo a codificação via o NVEN, que é o codificador da NVIDIA, a gente também vai estar utilizando ainda mais esse codificador. Só que isso não deve ser um problema, já que esse codificador é muito otimizado, já que é um hardware dedicado para fazer essa tarefa, a gente não deve encontrar nenhum problema. Vamos ver aqui, está chegando já no final. Depois a gente pode fazer uma comparação de imagem. Para que a gente possa comparar a imagem, a gente vai utilizar o YCAT. Eu vou fazer a configuração idêntica, a configuração do codificador H.264 vai ser idêntica, para que a gente possa comparar, vai ser os mesmos 1500. Então a gente já fez aqui no caso a conversão A gente pode ver aqui o arquivo Ficou mais ou menos a metade Mais ou menos a metade com o benchmark constante A qualidade de imagem ainda é boa Depende bastante do preset que a gente estiver utilizando Já que a gente está usando o FAS Vai ter um pouco mais de compressão Alguns artefatos de compressão Ok, a qualidade eu acho que ficou bacana Já que o arquivo vai ter um benchmark constante Agora a gente vai fazer com o H.264 A gente vai limpar a tela A gente vai começar com FFmpeg A-I, A-I Input.mp4 Menos C, barra V A gente vai usar aqui H.264 H.264 Underscore anything O preset a gente pode utilizar o P4 ou o P5 Vou usar o P5, que é um preset bacana. Menos V, a menos BV, vai ser 1500K. E o bobsize vai ser 6.000. E a saída vai ser output H264.mp4. Então, ok. Não achei. P5, né? P5 não existe. Vamos lá, menos preset. Decidi passar o preset. Ok a gente pode ver que a velocidade aqui est em 5 Est um pouco mais r Vamos ver qual o uso da placa de v A gente estava usando bastante o certificador de v Voc podem ver aqui que agora est em 100 Est usando um pouco do processador provavelmente para fazer a identifica do arquivo de v Agora está realmente em 100% a placa de vídeo fazendo essa compressão. Se a gente alterasse o preset de P5 para P4 ou P3, a gente alcançaria uma velocidade melhor. A gente está tentando manter uma boa qualidade de imagem. A gente pode ver que aqui a gente ainda está mais rápido que o preset X2004 Fast em CPU. A gente estava pegando mais ou menos 4.5x. Agora a gente está mais ou menos em 5.9. Então a gente ainda está com uma qualificação mais rápida E a gente provavelmente vai conseguir uma qualidade de imagem melhor Utilizando a placa de vídeo para fazer esse trabalho Então já está chegando em 6 minutos E a gente vai estar utilizando aqui o iCat Que é um programa da NVIDIA Que eu recomendo que vocês utilizem Se vocês quiserem comparar imagens e vídeos Geralmente é utilizado para comparar arquivos de vídeo Para que a gente possa ver diferenças na qualidade visual É um programa muito bom Eu recomendo que vocês realmente utilizem Se vocês quiserem fazer esse tipo de teste Então a gente está chegando no final Já vai em 9 minutos Então o vídeo tem 10 minutos A gente já está quase no final Está chegando no final Feito Então a gente aqui tem um arquivo Esse arquivo aqui Se a gente abrir A gente pode ver aqui a qualidade visual E para que a gente possa ver lado a lado Primeiro vamos abrir o X264 E vamos acionar aqui o H264 A gente também pode acionar a entrada, né? No caso, o arquivo original Então a gente tem comparação completa Se a gente reproduzir o arquivo A gente pode ver A gente tem que lembrar que aqui é o original O H264 e o X264 Em algumas partes eu acho que Se eu vir aqui O X264 e o H264 são bem comparáveis Principalmente nessa qualidade visual, tá? Quando a gente tira o zoom assim A gente pode ver que ainda ficam São bem comparáveis Se a gente pausar aqui A gente pode ver que ambos os codecs são bem comparáveis Só que utilizando a placa de vídeo é muito mais eficiente, né? A gente pode ver aqui a diferença visual. O H2004 parece ter um pouco mais de qualidade, né? Aqui, do que o X2004, mas mesmo assim, acho que são bem comparáveis. E aqui a gente pode ver o arquivo original, que não tem uma taxa de bitrate constante. E a gente pode ver, mais ou menos, as diferenças em qualidade, né? E eu acho que ficou bacana, né? Então, basicamente, esse é o tutorial, tá, pessoal? Se vocês gostaram desse vídeo, tá? Não esquece de deixar o like, se inscrever, isso ajuda bastante o canal. E vejo vocês no próximo vídeo.",
   "segments": [
     {
       "id": 0,
       "seek": 0,
       "start": 0,
-      "end": 2.42,
+      "end": 2.44,
       "text": " Olá pessoal, sejam bem-vindos a mais um vídeo do canal.",
       "tokens": [
         50365,
@@ -29,21 +29,21 @@
         360,
         9911,
         13,
-        50486
+        50487
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 1,
       "seek": 0,
-      "start": 2.54,
-      "end": 5.28,
+      "start": 2.56,
+      "end": 5.3,
       "text": " No vídeo de hoje eu vou estar mostrando a vocês como baixar e instalar o FFmpeg,",
       "tokens": [
-        50492,
+        50493,
         883,
         8071,
         368,
@@ -68,21 +68,21 @@
         494,
         70,
         11,
-        50629
+        50630
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 2,
       "seek": 0,
-      "start": 5.34,
-      "end": 8.74,
+      "start": 5.36,
+      "end": 8.76,
       "text": " que para quem não conhece é um programa que é utilizado para fazer conversão de vídeo e áudio.",
       "tokens": [
-        50632,
+        50633,
         631,
         1690,
         13026,
@@ -107,21 +107,21 @@
         532,
         1004,
         13,
-        50802
+        50803
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 3,
       "seek": 0,
-      "start": 8.84,
-      "end": 11.88,
+      "start": 8.86,
+      "end": 11.9,
       "text": " Então ele é muito utilizado para que a gente possa converter geralmente de um arquivo para outro.",
       "tokens": [
-        50807,
+        50808,
         6469,
         1118,
         1136,
@@ -143,21 +143,21 @@
         1690,
         13170,
         13,
-        50959
+        50960
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 4,
       "seek": 0,
-      "start": 12.02,
-      "end": 15.38,
+      "start": 12.04,
+      "end": 15.4,
       "text": " Inclusive o ABS utiliza o FFmpeg para fazer codificação de vídeo.",
       "tokens": [
-        50966,
+        50967,
         7779,
         7233,
         277,
@@ -178,21 +178,21 @@
         368,
         8071,
         13,
-        51134
+        51135
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 5,
       "seek": 0,
-      "start": 15.46,
-      "end": 18.86,
+      "start": 15.48,
+      "end": 18.88,
       "text": " E vários serviços de streaming, programas que lidam com vídeo, imagens, utilizam o FFmpeg.",
       "tokens": [
-        51138,
+        51139,
         462,
         29830,
         37076,
@@ -220,21 +220,21 @@
         494,
         70,
         13,
-        51308
+        51309
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 6,
       "seek": 0,
-      "start": 18.94,
-      "end": 22.48,
+      "start": 18.96,
+      "end": 22.5,
       "text": " Então é bem útil ter o FFmpeg instalado no Windows para que a gente possa utilizar para fazer alguma tarefa.",
       "tokens": [
-        51312,
+        51313,
         6469,
         1136,
         7577,
@@ -262,21 +262,21 @@
         49423,
         11771,
         13,
-        51489
+        51490
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 7,
       "seek": 0,
-      "start": 22.52,
-      "end": 26.88,
+      "start": 22.54,
+      "end": 26.9,
       "text": " Então vamos baixar aqui o FFmpeg e vou mostrar a vocês como instalar para que vocês possam ter acesso através do terminal.",
       "tokens": [
-        51491,
+        51492,
         6469,
         5295,
         40447,
@@ -307,19 +307,19 @@
         360,
         14709,
         13,
-        51709
+        51710
       ],
       "temperature": 0,
-      "avg_logprob": -0.056904204,
+      "avg_logprob": -0.05525199,
       "compression_ratio": 1.9248705,
-      "no_speech_prob": 0.08729206
+      "no_speech_prob": 0.25543645
     },
     {
       "id": 8,
-      "seek": 2688,
-      "start": 26.88,
-      "end": 36.52,
-      "text": " Então, para que a gente possa baixar o FFmpeg, a gente vai ter que pesquisar por FFmpeg, e a gente vai vir para o site oficial, que é o ffmpeg.org, que a gente vai ver algumas opções, a gente vai clicar aqui em Download, ok?",
+      "seek": 2690,
+      "start": 26.9,
+      "end": 36.54,
+      "text": " Então, para que a gente possa baixar o FFmpeg, a gente vai ter que pesquisar por FFmpeg, e a gente vai para o site oficial, que é o ffmpeg.org, que a gente vai ver algumas opções, a gente vai clicar aqui em Download, ok?",
       "tokens": [
         50365,
         6469,
@@ -357,7 +357,6 @@
         257,
         3788,
         4405,
-        4107,
         1690,
         277,
         3621,
@@ -397,15 +396,15 @@
         50847
       ],
       "temperature": 0,
-      "avg_logprob": -0.087469175,
-      "compression_ratio": 2.0027175,
-      "no_speech_prob": 0.026334047
+      "avg_logprob": -0.07812215,
+      "compression_ratio": 2.0431266,
+      "no_speech_prob": 0.030648967
     },
     {
       "id": 9,
-      "seek": 2688,
-      "start": 36.52,
-      "end": 41.68,
+      "seek": 2690,
+      "start": 36.54,
+      "end": 41.7,
       "text": " Nessa aba Download, a gente aqui vai ver a versão Windows, e a gente pode baixar de duas fontes, do dian.dev e do btbn.",
       "tokens": [
         50847,
@@ -448,15 +447,15 @@
         51105
       ],
       "temperature": 0,
-      "avg_logprob": -0.087469175,
-      "compression_ratio": 2.0027175,
-      "no_speech_prob": 0.026334047
+      "avg_logprob": -0.07812215,
+      "compression_ratio": 2.0431266,
+      "no_speech_prob": 0.030648967
     },
     {
       "id": 10,
-      "seek": 2688,
-      "start": 41.78,
-      "end": 47.98,
+      "seek": 2690,
+      "start": 41.8,
+      "end": 48,
       "text": " Eu vou baixar do btbn, então a gente vai vir aqui, a gente está no GitHub, onde a gente pode baixar o arquivo para download, esse arquivo aqui de 143 MB, ok?",
       "tokens": [
         51110,
@@ -508,16 +507,16 @@
         51420
       ],
       "temperature": 0,
-      "avg_logprob": -0.087469175,
-      "compression_ratio": 2.0027175,
-      "no_speech_prob": 0.026334047
+      "avg_logprob": -0.07812215,
+      "compression_ratio": 2.0431266,
+      "no_speech_prob": 0.030648967
     },
     {
       "id": 11,
-      "seek": 2688,
-      "start": 47.98,
-      "end": 50.46,
-      "text": " A gente vai fazer o download, e teve uma atualização hoje, né? Como vocês podem ver.",
+      "seek": 2690,
+      "start": 48,
+      "end": 50.48,
+      "text": " A gente vai fazer o download, e teve uma atualização hoje, né, como vocês podem ver.",
       "tokens": [
         51420,
         316,
@@ -535,8 +534,8 @@
         13458,
         11,
         7024,
-        30,
-        11913,
+        11,
+        2617,
         10522,
         20934,
         1306,
@@ -544,20 +543,19 @@
         51544
       ],
       "temperature": 0,
-      "avg_logprob": -0.087469175,
-      "compression_ratio": 2.0027175,
-      "no_speech_prob": 0.026334047
+      "avg_logprob": -0.07812215,
+      "compression_ratio": 2.0431266,
+      "no_speech_prob": 0.030648967
     },
     {
       "id": 12,
-      "seek": 2688,
-      "start": 50.46,
-      "end": 54.84,
-      "text": " Então, a gente vai fazer o download desse arquivo, que já foi efetuado, agora a gente vai extrair esse arquivo utilizando aqui o setzip.",
+      "seek": 5048,
+      "start": 50.48,
+      "end": 52.9,
+      "text": " Então a gente vai fazer o download desse arquivo que já foi efetuado",
       "tokens": [
-        51544,
+        50365,
         6469,
-        11,
         257,
         3788,
         4405,
@@ -567,15 +565,28 @@
         17864,
         40258,
         6340,
-        11,
         631,
         6242,
         6901,
         31482,
         41236,
         1573,
-        11,
-        9851,
+        50486
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
+    },
+    {
+      "id": 13,
+      "seek": 5048,
+      "start": 52.9,
+      "end": 54.84,
+      "text": " Agora a gente vai extrair esse arquivo utilizando aqui o setZ",
+      "tokens": [
+        50486,
+        16023,
         257,
         3788,
         4405,
@@ -589,23 +600,22 @@
         3871,
         277,
         992,
-        27268,
-        13,
-        51763
+        57,
+        50583
       ],
       "temperature": 0,
-      "avg_logprob": -0.087469175,
-      "compression_ratio": 2.0027175,
-      "no_speech_prob": 0.026334047
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 13,
-      "seek": 5484,
+      "id": 14,
+      "seek": 5048,
       "start": 54.84,
       "end": 56.46,
-      "text": " Então aqui a gente tem, a gente vai apagar o arquivo zip",
+      "text": " Então aqui a gente tem, a gente vai apagar o arquivo Z",
       "tokens": [
-        50365,
+        50583,
         6469,
         3871,
         257,
@@ -620,22 +630,22 @@
         277,
         40258,
         6340,
-        20730,
-        50446
+        1176,
+        50664
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 14,
-      "seek": 5484,
+      "id": 15,
+      "seek": 5048,
       "start": 56.46,
-      "end": 58.8,
+      "end": 58.82,
       "text": " Vou renomear apenas para ffmpeg, então a gente tem essa pasta",
       "tokens": [
-        50446,
+        50664,
         24361,
         8124,
         423,
@@ -654,21 +664,21 @@
         1383,
         7208,
         13296,
-        50563
+        50782
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 15,
-      "seek": 5484,
-      "start": 58.8,
-      "end": 60.44,
+      "id": 16,
+      "seek": 5048,
+      "start": 58.82,
+      "end": 60.46,
       "text": " Bem, para que a gente possa adicionar ao terminal",
       "tokens": [
-        50563,
+        50782,
         32846,
         11,
         1690,
@@ -681,21 +691,21 @@
         289,
         8130,
         14709,
-        50645
+        50864
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 16,
-      "seek": 5484,
-      "start": 60.44,
-      "end": 62.42,
+      "id": 17,
+      "seek": 5048,
+      "start": 60.46,
+      "end": 62.44,
       "text": " Vou abrir aqui o terminal, a gente vai digitar ffmpeg",
       "tokens": [
-        50645,
+        50864,
         24361,
         27446,
         3871,
@@ -712,21 +722,21 @@
         76,
         494,
         70,
-        50744
+        50963
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 17,
-      "seek": 5484,
-      "start": 62.42,
-      "end": 65.06,
+      "id": 18,
+      "seek": 5048,
+      "start": 62.44,
+      "end": 65.08,
       "text": " E a gente pode ver que ffmpeg não é reconhecido como comando interno",
       "tokens": [
-        50744,
+        50963,
         462,
         257,
         3788,
@@ -748,21 +758,21 @@
         1806,
         728,
         1771,
-        50876
+        51095
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 18,
-      "seek": 5484,
-      "start": 65.06,
-      "end": 66.94,
+      "id": 19,
+      "seek": 5048,
+      "start": 65.08,
+      "end": 66.96,
       "text": " Porque aqui a gente vai ter que atualizar esse arquivo",
       "tokens": [
-        50876,
+        51095,
         11287,
         3871,
         257,
@@ -775,50 +785,50 @@
         6755,
         40258,
         6340,
-        50970
+        51189
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 19,
-      "seek": 5484,
-      "start": 66.94,
-      "end": 67.68,
-      "text": " Nas variáveis de ambiente",
+      "id": 20,
+      "seek": 5048,
+      "start": 66.96,
+      "end": 68.68,
+      "text": " Nas variáveis de ambiente, então a gente já tem essa pasta",
       "tokens": [
-        50970,
+        51189,
         16151,
         3034,
         42530,
         368,
         34957,
-        51007
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
-    },
-    {
-      "id": 20,
-      "seek": 5484,
-      "start": 67.68,
-      "end": 69.94,
-      "text": " Então a gente já tem essa pasta, agora a gente vai ter que mover essa pasta",
-      "tokens": [
-        51007,
-        6469,
+        11,
+        9071,
         257,
         3788,
         6242,
         1383,
         7208,
         13296,
-        11,
-        9851,
+        51275
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
+    },
+    {
+      "id": 21,
+      "seek": 5048,
+      "start": 68.68,
+      "end": 69.96,
+      "text": " Agora a gente vai ter que mover essa pasta",
+      "tokens": [
+        51275,
+        16023,
         257,
         3788,
         4405,
@@ -827,22 +837,23 @@
         39945,
         7208,
         13296,
-        51120
+        51339
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 21,
-      "seek": 5484,
-      "start": 69.94,
-      "end": 72.52,
-      "text": " O local que vocês podem colocar essa pasta é no descolocar o C",
+      "id": 22,
+      "seek": 5048,
+      "start": 69.96,
+      "end": 72.54,
+      "text": " E o local que vocês podem colocar essa pasta é no disco local C",
       "tokens": [
-        51120,
-        422,
+        51339,
+        462,
+        277,
         2654,
         631,
         10522,
@@ -852,26 +863,24 @@
         13296,
         1136,
         572,
-        7471,
-        401,
-        47993,
-        277,
+        3622,
+        2654,
         383,
-        51249
+        51468
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 22,
-      "seek": 5484,
-      "start": 72.52,
+      "id": 23,
+      "seek": 5048,
+      "start": 72.54,
       "end": 74.66,
       "text": " Vocês podem colar aqui, então a gente aqui vai ter essa pasta",
       "tokens": [
-        51249,
+        51468,
         40262,
         20934,
         1173,
@@ -886,21 +895,21 @@
         1796,
         7208,
         13296,
-        51356
+        51574
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 23,
-      "seek": 5484,
+      "id": 24,
+      "seek": 5048,
       "start": 74.66,
-      "end": 76.36,
-      "text": " Feito isso, agora a gente vai abrir as variáveis de ambiente",
+      "end": 76.4,
+      "text": " Feito isso, agora a gente vai abrir as variáveis do ambiente",
       "tokens": [
-        51356,
+        51574,
         3697,
         3528,
         4616,
@@ -913,50 +922,54 @@
         382,
         3034,
         42530,
-        368,
+        360,
         34957,
-        51441
+        51661
       ],
       "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "avg_logprob": -0.07230812,
+      "compression_ratio": 2.256906,
+      "no_speech_prob": 0.009263544
     },
     {
-      "id": 24,
-      "seek": 5484,
-      "start": 76.36,
-      "end": 78.46,
-      "text": " Vocês podem abrir o menu do Windows e digitar apenas env",
+      "id": 25,
+      "seek": 7640,
+      "start": 76.4,
+      "end": 78.66,
+      "text": " vocês podem abrir o menú do Windows e digitar apenas ENVY.",
       "tokens": [
-        51441,
-        40262,
+        50365,
+        10522,
         20934,
         27446,
         277,
-        6510,
+        1706,
+        2481,
         360,
         8591,
         308,
         2528,
         3981,
         18561,
-        2267,
-        51546
+        15244,
+        53,
+        56,
+        13,
+        50478
       ],
-      "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
     },
     {
-      "id": 25,
-      "seek": 5484,
-      "start": 78.46,
-      "end": 80.92,
-      "text": " A gente vai ver aqui o menu para que a gente possa editar as variáveis de ambiente",
+      "id": 26,
+      "seek": 7640,
+      "start": 78.66,
+      "end": 81.46,
+      "text": " A gente vai ver aqui o menu para editar as variáveis em ambiente,",
       "tokens": [
-        51546,
+        50478,
         316,
         3788,
         4405,
@@ -965,32 +978,29 @@
         277,
         6510,
         1690,
-        631,
-        257,
-        3788,
-        41564,
         1257,
         3981,
         382,
         3034,
         42530,
-        368,
+        846,
         34957,
-        51669
+        11,
+        50618
       ],
-      "temperature": 0,
-      "avg_logprob": -0.072692,
-      "compression_ratio": 2.39823,
-      "no_speech_prob": 0.012425147
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
     },
     {
-      "id": 26,
-      "seek": 94,
-      "start": 80.92,
-      "end": 106.84531,
-      "text": " a gente vai clicar aqui a gente vai copiar essa pasta essa dois pontos barra ffmpeg barra bin a gente vai copiar esse endere a gente vai vir aqui novamente em path a gente vai editar e a gente vai clicar aqui em novo e adicionar agora a gente adicionou aqui o ffmpeg as vari de ambiente a gente vai clicar em ok ok e ok se a gente executar aqui o comando cmd a gente deve ver aqui o ffmpeg com sucesso ent aqui a gente pode ver que o ffmpeg foi instalado com sucesso Agora para os fins demonstrativos eu vou mostrar a voc como utilizar o FFmpeg para converter um arquivo de v MP4 para um formato que utilize menos dados",
+      "id": 27,
+      "seek": 7640,
+      "start": 81.46,
+      "end": 81.98,
+      "text": " a gente vai clicar aqui,",
       "tokens": [
-        50365,
+        50618,
         257,
         3788,
         4405,
@@ -998,6 +1008,21 @@
         7953,
         3871,
         11,
+        50644
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 28,
+      "seek": 7640,
+      "start": 81.98,
+      "end": 82.88,
+      "text": " a gente vai copiar essa pasta,",
+      "tokens": [
+        50644,
         257,
         3788,
         4405,
@@ -1006,22 +1031,55 @@
         7208,
         13296,
         11,
-        7208,
-        1136,
-        11854,
-        30676,
-        2159,
-        424,
-        283,
-        69,
-        76,
-        494,
-        70,
-        2159,
-        424,
-        5171,
+        50689
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 29,
+      "seek": 7640,
+      "start": 82.88,
+      "end": 84.7,
+      "text": " esse adesivo, barra FFNPeg, barra BIM.",
+      "tokens": [
+        50689,
+        6755,
+        614,
+        279,
+        6340,
         11,
-        257,
+        2159,
+        424,
+        479,
+        37,
+        45,
+        47,
+        1146,
+        11,
+        2159,
+        424,
+        363,
+        6324,
+        13,
+        50780
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 30,
+      "seek": 7640,
+      "start": 84.7,
+      "end": 85.94,
+      "text": " A gente vai copiar esse endereço.",
+      "tokens": [
+        50780,
+        316,
         3788,
         4405,
         2971,
@@ -1030,22 +1088,67 @@
         917,
         323,
         8560,
-        11,
-        257,
+        13,
+        50842
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 31,
+      "seek": 7640,
+      "start": 85.94,
+      "end": 87.44,
+      "text": " A gente vai vir aqui novamente em Path,",
+      "tokens": [
+        50842,
+        316,
         3788,
         4405,
         4107,
         3871,
         49960,
         846,
-        3100,
+        21914,
         11,
+        50917
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 32,
+      "seek": 7640,
+      "start": 87.44,
+      "end": 87.98,
+      "text": " a gente vai editar,",
+      "tokens": [
+        50917,
         257,
         3788,
         4405,
         1257,
         3981,
-        308,
+        11,
+        50944
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 33,
+      "seek": 7640,
+      "start": 87.98,
+      "end": 89.62,
+      "text": " a gente vai clicar aqui em Novo e Adicionar.",
+      "tokens": [
+        50944,
         257,
         3788,
         4405,
@@ -1053,13 +1156,29 @@
         7953,
         3871,
         846,
-        18246,
+        883,
+        3080,
         308,
-        614,
+        1999,
         18899,
         289,
-        11,
-        9851,
+        13,
+        51026
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 34,
+      "seek": 7640,
+      "start": 89.62,
+      "end": 92.06,
+      "text": " Agora a gente adicionou aqui o FFNPeg, as variáveis de Ambiente.",
+      "tokens": [
+        51026,
+        16023,
         257,
         3788,
         614,
@@ -1067,29 +1186,61 @@
         263,
         3871,
         277,
-        283,
-        69,
-        76,
-        494,
-        70,
+        479,
+        37,
+        45,
+        47,
+        1146,
+        11,
         382,
         3034,
         42530,
         368,
-        34957,
-        11,
-        257,
+        17196,
+        8413,
+        13,
+        51148
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 35,
+      "seek": 7640,
+      "start": 92.06,
+      "end": 93.38,
+      "text": " A gente vai clicar em OK, OK e OK,",
+      "tokens": [
+        51148,
+        316,
         3788,
         4405,
         596,
         7953,
         846,
-        3133,
+        2264,
         11,
-        3133,
+        2264,
         308,
-        3133,
+        2264,
         11,
+        51214
+      ],
+      "temperature": 0.8,
+      "avg_logprob": -0.6149578,
+      "compression_ratio": 2.0186336,
+      "no_speech_prob": 0.000035908262
+    },
+    {
+      "id": 36,
+      "seek": 94,
+      "start": 93.38,
+      "end": 106.85143,
+      "text": " se a gente executar aqui o comando CMD a gente deve ver aqui o FFNPeg com sucesso Ent aqui a gente pode ver que o FFNPeg foi instalado com sucesso Agora para os fins demonstrativos eu vou mostrar a voc como utilizar o FFmpeg para converter um arquivo de v MP4 para um formato que utilize menos dados",
+      "tokens": [
+        51214,
         369,
         257,
         3788,
@@ -1099,25 +1250,31 @@
         277,
         395,
         1806,
-        14668,
-        67,
+        20424,
+        35,
         11,
+        51307,
+        51307,
         257,
         3788,
         17761,
         1306,
         3871,
         277,
-        283,
-        69,
-        76,
-        494,
-        70,
+        479,
+        37,
+        45,
+        47,
+        1146,
+        11,
         395,
         459,
         43611,
+        13,
+        51439,
+        51439,
+        6469,
         11,
-        9071,
         3871,
         257,
         3788,
@@ -1125,18 +1282,20 @@
         1306,
         631,
         277,
-        283,
-        69,
-        76,
-        494,
-        70,
+        479,
+        37,
+        45,
+        47,
+        1146,
         6901,
+        34059,
+        1573,
         395,
         459,
         43611,
         13,
-        50615,
-        50619,
+        50617,
+        50621,
         16023,
         1690,
         3003,
@@ -1176,31 +1335,30 @@
         8902,
         39915,
         13,
-        50962
+        50963
       ],
       "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
+      "avg_logprob": -0.103941135,
+      "compression_ratio": 2.0025973,
+      "no_speech_prob": 0.1456525
     },
     {
-      "id": 27,
+      "id": 37,
       "seek": 94,
-      "start": 106.905304,
-      "end": 109.34531,
-      "text": " Então a gente vai ver aqui em vídeos, eu renomeei para input para que fique mais fácil.",
+      "start": 106.931435,
+      "end": 113.01144,
+      "text": " Então a gente vai vir aqui em vídeos, renomeei para input para que fique mais fácil, mas vocês também podem passar o endereço do arquivo em entre aspas duplas.",
       "tokens": [
-        50965,
+        50967,
         6469,
         257,
         3788,
         4405,
-        1306,
+        4107,
         3871,
         846,
         20617,
         11,
-        2228,
         8124,
         423,
         17067,
@@ -1211,23 +1369,8 @@
         35497,
         2420,
         17474,
-        13,
-        51087
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
-    },
-    {
-      "id": 28,
-      "seek": 94,
-      "start": 109.445305,
-      "end": 113.0053,
-      "text": " Mas vocês também podem passar o endereço do arquivo em entre aspas duplas.",
-      "tokens": [
-        51092,
-        5224,
+        11,
+        2300,
         10522,
         6274,
         20934,
@@ -1247,21 +1390,21 @@
         564,
         296,
         13,
-        51270
+        51271
       ],
       "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
+      "avg_logprob": -0.103941135,
+      "compression_ratio": 2.0025973,
+      "no_speech_prob": 0.1456525
     },
     {
-      "id": 29,
+      "id": 38,
       "seek": 94,
-      "start": 113.1053,
-      "end": 114.585304,
-      "text": " A gente vai ver esse vídeo que basicamente é o vídeo do Sora.",
+      "start": 113.13143,
+      "end": 118.45143,
+      "text": " A gente vai ver esse vídeo que basicamente é o vídeo do Sora, se a gente vir em propriedades, a gente vai ver que esse vídeo tem uma taxa de bitrate de mais ou menos 2500.",
       "tokens": [
-        51275,
+        51277,
         316,
         3788,
         4405,
@@ -1276,23 +1419,8 @@
         8071,
         360,
         46639,
-        13,
-        51349
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
-    },
-    {
-      "id": 30,
-      "seek": 94,
-      "start": 114.6853,
-      "end": 118.445305,
-      "text": " Se a gente vir em propriedades, a gente vai ver que esse vídeo tem uma taxa de bitrate de mais ou menos 2500.",
-      "tokens": [
-        51354,
-        1100,
+        11,
+        369,
         257,
         3788,
         4107,
@@ -1321,21 +1449,21 @@
         8902,
         41171,
         13,
-        51542
+        51543
       ],
       "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
+      "avg_logprob": -0.103941135,
+      "compression_ratio": 2.0025973,
+      "no_speech_prob": 0.1456525
     },
     {
-      "id": 31,
+      "id": 39,
       "seek": 94,
-      "start": 118.805305,
-      "end": 120.7253,
-      "text": " Só que aqui é uma taxa de bitrate variável.",
+      "start": 118.831436,
+      "end": 123.81143,
+      "text": " Só que aqui é uma taxa de bitrate variável, então a gente vai converter esse vídeo para uma taxa de bits menor e a gente vai ver isso em tempo real.",
       "tokens": [
-        51560,
+        51562,
         19961,
         631,
         3871,
@@ -1348,23 +1476,8 @@
         4404,
         3034,
         20224,
-        13,
-        51656
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
-    },
-    {
-      "id": 32,
-      "seek": 94,
-      "start": 120.805305,
-      "end": 123.7853,
-      "text": " Então a gente vai converter esse vídeo para uma taxa de bits menor e a gente vai ver isso em tempo real.",
-      "tokens": [
-        51660,
-        6469,
+        11,
+        9071,
         257,
         3788,
         4405,
@@ -1388,18 +1501,18 @@
         8972,
         957,
         13,
-        51809
+        51811
       ],
       "temperature": 0,
-      "avg_logprob": -0.08360299,
-      "compression_ratio": 2.0261097,
-      "no_speech_prob": 0.03726879
+      "avg_logprob": -0.103941135,
+      "compression_ratio": 2.0025973,
+      "no_speech_prob": 0.1456525
     },
     {
-      "id": 33,
-      "seek": 2982,
-      "start": 123.7853,
-      "end": 126.2853,
+      "id": 40,
+      "seek": 2986,
+      "start": 123.81143,
+      "end": 126.31143,
       "text": " A gente também poderia diminuir a resolução, alterar o FPS e várias outras coisas.",
       "tokens": [
         50365,
@@ -1425,18 +1538,18 @@
         50490
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 34,
-      "seek": 2982,
-      "start": 126.405304,
-      "end": 128.8053,
-      "text": " A gente vai ver aqui o terminal, cmd, executar o comando cdvideos,",
+      "id": 41,
+      "seek": 2986,
+      "start": 126.41144,
+      "end": 128.83144,
+      "text": " A gente vai ver aqui o terminal, cmd, vai executar o comando cdvideos,",
       "tokens": [
-        50496,
+        50495,
         316,
         3788,
         4405,
@@ -1448,6 +1561,7 @@
         14668,
         67,
         11,
+        4405,
         7568,
         289,
         277,
@@ -1462,18 +1576,18 @@
         50616
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 35,
-      "seek": 2982,
-      "start": 128.9053,
-      "end": 130.5453,
+      "id": 42,
+      "seek": 2986,
+      "start": 128.91144,
+      "end": 130.57144,
       "text": " e a gente vai ver esse vídeo, a gente vai executar o comando dur,",
       "tokens": [
-        50621,
+        50620,
         308,
         257,
         3788,
@@ -1495,15 +1609,15 @@
         50703
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 36,
-      "seek": 2982,
-      "start": 130.6253,
-      "end": 132.0453,
+      "id": 43,
+      "seek": 2986,
+      "start": 130.65143,
+      "end": 132.07144,
       "text": " e a gente vai ver aqui o vídeo, input.mp4.",
       "tokens": [
         50707,
@@ -1524,15 +1638,15 @@
         50778
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 37,
-      "seek": 2982,
-      "start": 132.1053,
-      "end": 134.92531,
+      "id": 44,
+      "seek": 2986,
+      "start": 132.13144,
+      "end": 134.95143,
       "text": " Agora a gente vai digitar o comando, que basicamente começa com ffmpeg,",
       "tokens": [
         50781,
@@ -1560,15 +1674,15 @@
         50922
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 38,
-      "seek": 2982,
-      "start": 134.9853,
-      "end": 137.0453,
+      "id": 45,
+      "seek": 2986,
+      "start": 135.01143,
+      "end": 137.07144,
       "text": " menos i de input, input.mp4.",
       "tokens": [
         50925,
@@ -1585,16 +1699,16 @@
         51028
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 39,
-      "seek": 2982,
-      "start": 137.14531,
-      "end": 140.42531,
-      "text": " A gente vai definir aqui menos c, 2 pontos v, que no caso seria a entrada.",
+      "id": 46,
+      "seek": 2986,
+      "start": 137.17143,
+      "end": 140.45143,
+      "text": " A gente vai definir aqui menos c, dois pontos v, que no caso seria a entrada.",
       "tokens": [
         51033,
         316,
@@ -1606,7 +1720,7 @@
         8902,
         269,
         11,
-        568,
+        11854,
         30676,
         371,
         11,
@@ -1620,15 +1734,15 @@
         51197
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 40,
-      "seek": 2982,
-      "start": 140.6653,
-      "end": 142.1653,
+      "id": 47,
+      "seek": 2986,
+      "start": 140.69144,
+      "end": 142.19144,
       "text": " No caso, o codec que a gente vai estar utilizando, que vai ser,",
       "tokens": [
         51209,
@@ -1653,15 +1767,15 @@
         51284
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 41,
-      "seek": 2982,
-      "start": 142.1653,
-      "end": 144.7653,
+      "id": 48,
+      "seek": 2986,
+      "start": 142.19144,
+      "end": 144.77144,
       "text": " nesse primeiro exemplo, vai ser o x264, que é um qualificador de CPU,",
       "tokens": [
         51284,
@@ -1685,19 +1799,19 @@
         368,
         13199,
         11,
-        51414
+        51413
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 42,
-      "seek": 2982,
-      "start": 144.8853,
-      "end": 147.5853,
-      "text": " muito utilizado no passado, só que agora é mais comum utilizar o GPU,",
+      "id": 49,
+      "seek": 2986,
+      "start": 144.91144,
+      "end": 147.59143,
+      "text": " muito utilizado no passado, só que agora é mais comum utilizar a GPU,",
       "tokens": [
         51420,
         4945,
@@ -1713,21 +1827,21 @@
         2420,
         44324,
         24060,
-        277,
+        257,
         18407,
         11,
-        51555
+        51554
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 43,
-      "seek": 2982,
-      "start": 147.7053,
-      "end": 149.3453,
+      "id": 50,
+      "seek": 2986,
+      "start": 147.73143,
+      "end": 149.37143,
       "text": " já que na GPU é muito mais rápido.",
       "tokens": [
         51561,
@@ -1743,18 +1857,18 @@
         51643
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 44,
-      "seek": 2982,
-      "start": 149.44531,
-      "end": 151.50531,
+      "id": 51,
+      "seek": 2986,
+      "start": 149.49142,
+      "end": 151.53143,
       "text": " A gente vai usar o preset fast, que é rápido,",
       "tokens": [
-        51648,
+        51649,
         316,
         3788,
         4405,
@@ -1770,53 +1884,18 @@
         51751
       ],
       "temperature": 0,
-      "avg_logprob": -0.12146461,
-      "compression_ratio": 1.9625669,
-      "no_speech_prob": 0.01769968
+      "avg_logprob": -0.11047677,
+      "compression_ratio": 1.9655173,
+      "no_speech_prob": 0.012617055
     },
     {
-      "id": 45,
-      "seek": 5754,
-      "start": 151.50531,
-      "end": 153.5653,
-      "text": " que a gente vai definir a taxa de bitrate, menos B, 2 pontos V.",
+      "id": 52,
+      "seek": 5986,
+      "start": 153.81143,
+      "end": 156.67143,
+      "text": " A taxa de bitrate a gente vai fazer com que seja 1500 KB, ok?",
       "tokens": [
         50365,
-        631,
-        257,
-        3788,
-        4405,
-        1561,
-        347,
-        257,
-        3366,
-        64,
-        368,
-        857,
-        4404,
-        11,
-        8902,
-        363,
-        11,
-        568,
-        30676,
-        691,
-        13,
-        50468
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
-    },
-    {
-      "id": 46,
-      "seek": 5754,
-      "start": 153.64531,
-      "end": 156.64531,
-      "text": " A taxa de bitrate a gente vai fazer com que seja 1.500 KB, ok?",
-      "tokens": [
-        50472,
         316,
         3366,
         64,
@@ -1830,47 +1909,45 @@
         395,
         631,
         13459,
-        502,
-        13,
-        7526,
+        22671,
         591,
         33,
         11,
         3133,
         30,
-        50622
+        50508
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 47,
-      "seek": 5754,
-      "start": 156.92531,
-      "end": 157.2053,
+      "id": 53,
+      "seek": 5986,
+      "start": 156.93143,
+      "end": 157.21143,
       "text": " Constantes.",
       "tokens": [
-        50636,
+        50521,
         8574,
         9327,
         13,
-        50650
+        50535
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 48,
-      "seek": 5754,
-      "start": 157.3653,
-      "end": 160.1253,
-      "text": " A gente vai definir o buffer size, o buffer size, de 6.000.",
+      "id": 54,
+      "seek": 5986,
+      "start": 157.39143,
+      "end": 160.01144,
+      "text": " A gente vai definir o buffer size, o buffer size de 6000.",
       "tokens": [
-        50658,
+        50544,
         316,
         3788,
         4405,
@@ -1883,27 +1960,24 @@
         277,
         21762,
         2744,
-        11,
         368,
-        1386,
+        41789,
         13,
-        1360,
-        13,
-        50796
+        50675
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 49,
-      "seek": 5754,
-      "start": 160.2453,
-      "end": 161.66531,
-      "text": " E a gente vai definir aqui um arquivo output,",
+      "id": 55,
+      "seek": 5986,
+      "start": 160.25143,
+      "end": 163.91144,
+      "text": " E a gente vai definir aqui um arquivo output, vamos nomear aqui x264.mp4.",
       "tokens": [
-        50802,
+        50687,
         462,
         257,
         3788,
@@ -1916,22 +1990,6 @@
         6340,
         5598,
         11,
-        50873
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
-    },
-    {
-      "id": 50,
-      "seek": 5754,
-      "start": 161.7653,
-      "end": 163.8653,
-      "text": " e vamos nomear aqui x264.mp4.",
-      "tokens": [
-        50878,
-        308,
         5295,
         19003,
         289,
@@ -1943,21 +2001,21 @@
         2455,
         19,
         13,
-        50983
+        50870
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 51,
-      "seek": 5754,
-      "start": 163.94531,
-      "end": 164.9053,
-      "text": " Então, executando esse comando,",
+      "id": 56,
+      "seek": 5986,
+      "start": 163.97144,
+      "end": 166.37143,
+      "text": " Então, executando esse comando, a gente vai estar convertendo, utilizando o processador.",
       "tokens": [
-        50987,
+        50873,
         6469,
         11,
         7568,
@@ -1966,21 +2024,6 @@
         395,
         1806,
         11,
-        51035
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
-    },
-    {
-      "id": 52,
-      "seek": 5754,
-      "start": 164.9653,
-      "end": 166.3453,
-      "text": " a gente vai estar convertendo, utilizando o processador,",
-      "tokens": [
-        51038,
         257,
         3788,
         4405,
@@ -1993,23 +2036,23 @@
         277,
         1399,
         5409,
-        11,
-        51107
+        13,
+        50993
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 53,
-      "seek": 5754,
-      "start": 166.4253,
-      "end": 167.9853,
-      "text": " a gente pode ver o uso de CPU em tempo real.",
+      "id": 57,
+      "seek": 5986,
+      "start": 166.45143,
+      "end": 168.01144,
+      "text": " A gente pode ver o uso de CPU em tempo real.",
       "tokens": [
-        51111,
-        257,
+        50997,
+        316,
         3788,
         7468,
         1306,
@@ -2021,21 +2064,21 @@
         8972,
         957,
         13,
-        51189
+        51075
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 54,
-      "seek": 5754,
-      "start": 168.1053,
-      "end": 169.8053,
-      "text": " A gente pode ver aqui todos os cores trabalhando",
+      "id": 58,
+      "seek": 5986,
+      "start": 168.13144,
+      "end": 170.85144,
+      "text": " A gente pode ver aqui todos os cores trabalhando para fazer a conversão deste vídeo.",
       "tokens": [
-        51195,
+        51081,
         316,
         3788,
         7468,
@@ -2046,44 +2089,29 @@
         24826,
         12067,
         28190,
-        51280
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
-    },
-    {
-      "id": 55,
-      "seek": 5754,
-      "start": 169.8053,
-      "end": 170.8253,
-      "text": " para fazer a conversão desse vídeo.",
-      "tokens": [
-        51280,
         1690,
         6736,
         257,
         2615,
         1076,
-        17864,
+        38738,
         8071,
         13,
-        51331
+        51217
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 56,
-      "seek": 5754,
-      "start": 170.94531,
-      "end": 172.8053,
+      "id": 59,
+      "seek": 5986,
+      "start": 170.97144,
+      "end": 172.83144,
       "text": " Inclusive, a gente pode ver o FPS atual, né?",
       "tokens": [
-        51337,
+        51223,
         7779,
         7233,
         11,
@@ -2097,42 +2125,26 @@
         11,
         7024,
         30,
-        51430
+        51316
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 57,
-      "seek": 5754,
-      "start": 172.8053,
-      "end": 173.66531,
-      "text": " Está fazendo essa tarefa,",
+      "id": 60,
+      "seek": 5986,
+      "start": 172.83144,
+      "end": 175.97144,
+      "text": " Está fazendo essa tarefa utilizando na velocidade de 134 FPS,",
       "tokens": [
-        51430,
+        51316,
         27304,
         20741,
         7208,
         49423,
         11771,
-        11,
-        51473
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
-    },
-    {
-      "id": 58,
-      "seek": 5754,
-      "start": 173.78531,
-      "end": 175.88531,
-      "text": " utilizando na velocidade de 134 FPS,",
-      "tokens": [
-        51479,
         19906,
         1806,
         1667,
@@ -2142,21 +2154,21 @@
         19,
         26429,
         11,
-        51584
+        51473
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 59,
-      "seek": 5754,
-      "start": 176.0853,
-      "end": 178.3053,
+      "id": 61,
+      "seek": 5986,
+      "start": 176.11143,
+      "end": 178.33144,
       "text": " que é mais ou menos aí 4 vezes a velocidade real.",
       "tokens": [
-        51594,
+        51480,
         631,
         1136,
         2420,
@@ -2169,21 +2181,21 @@
         45181,
         957,
         13,
-        51705
+        51591
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 60,
-      "seek": 5754,
-      "start": 178.38531,
-      "end": 180.6453,
+      "id": 62,
+      "seek": 5986,
+      "start": 178.41144,
+      "end": 180.67143,
       "text": " E esse preset fast é um preset relativamente rápido.",
       "tokens": [
-        51709,
+        51595,
         462,
         6755,
         32081,
@@ -2195,21 +2207,21 @@
         3439,
         24893,
         13,
-        51822
+        51708
       ],
       "temperature": 0,
-      "avg_logprob": -0.13536198,
-      "compression_ratio": 1.8376288,
-      "no_speech_prob": 0.0104834
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 61,
-      "seek": 8668,
-      "start": 180.6453,
-      "end": 183.6053,
+      "id": 63,
+      "seek": 5986,
+      "start": 180.67143,
+      "end": 183.61143,
       "text": " A gente pode ver aqui que está tentando manter o bitrate de 1500, né?",
       "tokens": [
-        50365,
+        51708,
         316,
         3788,
         7468,
@@ -2228,21 +2240,21 @@
         11,
         7024,
         30,
-        50513
+        51855
       ],
       "temperature": 0,
-      "avg_logprob": -0.10236195,
-      "compression_ratio": 1.6768448,
-      "no_speech_prob": 0.007342002
+      "avg_logprob": -0.12880787,
+      "compression_ratio": 1.8147209,
+      "no_speech_prob": 0.06269016
     },
     {
-      "id": 62,
-      "seek": 8668,
-      "start": 183.66531,
-      "end": 186.8053,
-      "text": " Para live streaming, geralmente, no OBS, a gente utiliza 6000, né?",
+      "id": 64,
+      "seek": 8966,
+      "start": 183.61143,
+      "end": 188.37143,
+      "text": " Para live streaming, geralmente, no EBS, a gente utiliza 6.000, quando se trata de fazer lives para Twitch.",
       "tokens": [
-        50516,
+        50365,
         11107,
         1621,
         11791,
@@ -2251,33 +2263,18 @@
         4082,
         11,
         572,
-        422,
+        462,
         8176,
         11,
         257,
         3788,
         4976,
         13427,
-        41789,
+        1386,
+        13,
+        1360,
         11,
-        7024,
-        30,
-        50673
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.10236195,
-      "compression_ratio": 1.6768448,
-      "no_speech_prob": 0.007342002
-    },
-    {
-      "id": 63,
-      "seek": 8668,
-      "start": 186.8053,
-      "end": 188.3653,
-      "text": " Quando se trata de fazer lives para Twitch.",
-      "tokens": [
-        50673,
-        18725,
+        7770,
         369,
         31920,
         368,
@@ -2286,21 +2283,21 @@
         1690,
         22222,
         13,
-        50751
+        50603
       ],
       "temperature": 0,
-      "avg_logprob": -0.10236195,
-      "compression_ratio": 1.6768448,
-      "no_speech_prob": 0.007342002
+      "avg_logprob": -0.08574817,
+      "compression_ratio": 1.6541786,
+      "no_speech_prob": 0.012226103
     },
     {
-      "id": 64,
-      "seek": 8668,
-      "start": 188.4853,
-      "end": 192.2053,
-      "text": " E o Codec X264 tem algumas vantagens e outras desvantagens em comparação ao H264,",
+      "id": 65,
+      "seek": 8966,
+      "start": 188.51144,
+      "end": 193.45143,
+      "text": " E o Codec X264 tem algumas vantagens e outras desvantagens em comparação ao H.264, que seria o codificador de hardware.",
       "tokens": [
-        50757,
+        50610,
         462,
         277,
         15549,
@@ -2324,24 +2321,10 @@
         2917,
         8130,
         389,
+        13,
         10880,
         19,
         11,
-        50943
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.10236195,
-      "compression_ratio": 1.6768448,
-      "no_speech_prob": 0.007342002
-    },
-    {
-      "id": 65,
-      "seek": 8668,
-      "start": 192.2653,
-      "end": 193.44531,
-      "text": " que seria o codificador de hardware.",
-      "tokens": [
-        50946,
         631,
         20809,
         277,
@@ -2351,21 +2334,21 @@
         368,
         8837,
         13,
-        51005
+        50857
       ],
       "temperature": 0,
-      "avg_logprob": -0.10236195,
-      "compression_ratio": 1.6768448,
-      "no_speech_prob": 0.007342002
+      "avg_logprob": -0.08574817,
+      "compression_ratio": 1.6541786,
+      "no_speech_prob": 0.012226103
     },
     {
       "id": 66,
       "seek": 194,
-      "start": 193.5453,
-      "end": 204.91061,
-      "text": " S que a gente tamb pode utilizar o FFmpeg para fazer outras coisas t Inclusive a gente pode alterar o FPS de um v a gente pode pegar uma sequ de imagens e converter um v Ent muito ter essa biblioteca para que voc possam ter acesso f n Essa biblioteca realmente muito para v situa",
+      "start": 193.55144,
+      "end": 204.90286,
+      "text": " S que a gente tamb pode utilizar o FFmpeg para fazer outras coisas Inclusive a gente pode alterar o FPS de um v a gente pode pegar uma sequ de imagens e converter um v Ent muito ter essa biblioteca para que voc possam ter acesso f Essa biblioteca realmente muito para v situa",
       "tokens": [
-        51010,
+        50862,
         19961,
         631,
         257,
@@ -2383,11 +2366,9 @@
         6736,
         22221,
         14567,
-        11,
-        7737,
-        30,
-        51124,
-        51125,
+        13,
+        50970,
+        50976,
         7779,
         7233,
         11,
@@ -2402,8 +2383,6 @@
         1105,
         8071,
         11,
-        51223,
-        51228,
         257,
         3788,
         7468,
@@ -2418,11 +2397,11 @@
         33905,
         1105,
         8071,
+        8071,
         13,
-        50609,
-        50613,
+        50610,
+        50614,
         6469,
-        11,
         1136,
         4945,
         49191,
@@ -2439,11 +2418,9 @@
         1796,
         49543,
         17474,
-        11,
-        7024,
-        30,
-        50769,
-        50771,
+        13,
+        50763,
+        50770,
         22818,
         34344,
         1370,
@@ -2457,26 +2434,41 @@
         2054,
         17971,
         13,
-        50870
+        50871
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
       "id": 67,
       "seek": 194,
-      "start": 205.03061,
-      "end": 206.83061,
-      "text": " Vamos ver aqui, eu acho que está quase terminando.",
+      "start": 205.04286,
+      "end": 205.44287,
+      "text": " Vamos ver aqui.",
       "tokens": [
-        50876,
+        50878,
         10894,
         1306,
         3871,
-        11,
-        2228,
+        13,
+        50898
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
+    },
+    {
+      "id": 68,
+      "seek": 194,
+      "start": 205.48286,
+      "end": 206.82286,
+      "text": " Eu acho que está quase terminando.",
+      "tokens": [
+        50900,
+        2186,
         14253,
         631,
         3192,
@@ -2484,21 +2476,21 @@
         10761,
         1806,
         13,
-        50966
+        50967
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 68,
+      "id": 69,
       "seek": 194,
-      "start": 206.9306,
-      "end": 209.0706,
-      "text": " Na verdade, já vai em 5 minutos, o vídeo tem 10 minutos.",
+      "start": 206.92287,
+      "end": 208.22287,
+      "text": " Na verdade, já vai em 5 minutos.",
       "tokens": [
-        50971,
+        50972,
         6056,
         15203,
         11,
@@ -2507,30 +2499,44 @@
         846,
         1025,
         19421,
-        11,
-        277,
+        13,
+        51037
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
+    },
+    {
+      "id": 70,
+      "seek": 194,
+      "start": 208.30287,
+      "end": 209.06287,
+      "text": " O vídeo tem 10 minutos.",
+      "tokens": [
+        51041,
+        422,
         8071,
         1383,
         1266,
         19421,
         13,
-        51078
+        51079
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 69,
+      "id": 71,
       "seek": 194,
-      "start": 209.19061,
-      "end": 210.7106,
-      "text": " Então, o vídeo tem mais ou menos 10 minutos.",
+      "start": 209.20287,
+      "end": 210.70287,
+      "text": " Então o vídeo tem mais ou menos 10 minutos.",
       "tokens": [
-        51084,
+        51086,
         6469,
-        11,
         277,
         8071,
         1383,
@@ -2540,73 +2546,88 @@
         1266,
         19421,
         13,
-        51160
+        51161
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 70,
+      "id": 72,
       "seek": 194,
-      "start": 210.81061,
-      "end": 213.17061,
-      "text": " A gente pode ver aqui, o tempo decorrido vai em 6 minutos.",
+      "start": 210.80287,
+      "end": 212.24286,
+      "text": " A gente pode ver aqui o tempo decorrido.",
       "tokens": [
-        51165,
+        51166,
         316,
         3788,
         7468,
         1306,
         3871,
-        11,
         277,
         8972,
         7919,
         81,
         2925,
-        4405,
+        13,
+        51238
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
+    },
+    {
+      "id": 73,
+      "seek": 194,
+      "start": 212.42287,
+      "end": 213.16287,
+      "text": " Vai em 6 minutos.",
+      "tokens": [
+        51247,
+        24206,
         846,
         1386,
         19421,
         13,
-        51283
+        51284
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 71,
+      "id": 74,
       "seek": 194,
-      "start": 213.2306,
-      "end": 213.67061,
+      "start": 213.22287,
+      "end": 213.66287,
       "text": " Vai demorar um pouco.",
       "tokens": [
-        51286,
+        51287,
         24206,
         1371,
         42967,
         1105,
         13920,
         13,
-        51308
+        51309
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 72,
+      "id": 75,
       "seek": 194,
-      "start": 213.7106,
-      "end": 216.7706,
+      "start": 213.66287,
+      "end": 216.78287,
       "text": " Quando a gente estiver utilizando a placa de vídeo, deve ser um pouco mais rápido.",
       "tokens": [
-        51310,
+        51309,
         18725,
         257,
         3788,
@@ -2626,23 +2647,22 @@
         2420,
         24893,
         13,
-        51463
+        51465
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 73,
+      "id": 76,
       "seek": 194,
-      "start": 216.83061,
-      "end": 218.7106,
-      "text": " Então, vocês estão vendo aqui todos os Nukios trabalhando.",
+      "start": 216.84286,
+      "end": 218.72287,
+      "text": " Então vocês estão vendo aqui todos os Nukios trabalhando.",
       "tokens": [
-        51466,
+        51468,
         6469,
-        11,
         10522,
         14775,
         33152,
@@ -2655,24 +2675,23 @@
         12067,
         28190,
         13,
-        51560
+        51562
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 74,
+      "id": 77,
       "seek": 194,
-      "start": 218.8706,
-      "end": 221.1506,
-      "text": " Inclusive, já estou utilizando a placa de vídeo para fazer codificação de vídeo.",
+      "start": 218.86287,
+      "end": 221.14287,
+      "text": " Inclusive já estou utilizando a placa de vídeo para fazer codificação de vídeo.",
       "tokens": [
-        51568,
+        51569,
         7779,
         7233,
-        11,
         6242,
         17660,
         19906,
@@ -2690,18 +2709,18 @@
         368,
         8071,
         13,
-        51682
+        51683
       ],
       "temperature": 0,
-      "avg_logprob": -0.09997401,
-      "compression_ratio": 1.9292238,
-      "no_speech_prob": 0.06087823
+      "avg_logprob": -0.13330323,
+      "compression_ratio": 1.9059407,
+      "no_speech_prob": 0.052528523
     },
     {
-      "id": 75,
-      "seek": 2828,
-      "start": 221.1506,
-      "end": 225.2706,
+      "id": 78,
+      "seek": 2830,
+      "start": 221.14287,
+      "end": 225.26286,
       "text": " Essa parte aqui que vocês estão vendo é da própria gravação do vídeo que vocês estão vendo agora.",
       "tokens": [
         50365,
@@ -2729,15 +2748,15 @@
         50571
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 76,
-      "seek": 2828,
-      "start": 225.3706,
-      "end": 229.17061,
+      "id": 79,
+      "seek": 2830,
+      "start": 225.36287,
+      "end": 229.18286,
       "text": " Então quando a gente estiver fazendo a codificação via o NVEN, que é o codificador da NVIDIA,",
       "tokens": [
         50576,
@@ -2767,18 +2786,18 @@
         3958,
         6914,
         11,
-        50766
+        50767
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 77,
-      "seek": 2828,
-      "start": 229.25061,
-      "end": 231.47061,
+      "id": 80,
+      "seek": 2830,
+      "start": 229.24286,
+      "end": 231.46286,
       "text": " a gente também vai estar utilizando ainda mais esse codificador.",
       "tokens": [
         50770,
@@ -2799,15 +2818,15 @@
         50881
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 78,
-      "seek": 2828,
-      "start": 231.5706,
-      "end": 233.9306,
+      "id": 81,
+      "seek": 2830,
+      "start": 231.56287,
+      "end": 233.92287,
       "text": " Só que isso não deve ser um problema, já que esse codificador é muito otimizado,",
       "tokens": [
         50886,
@@ -2835,15 +2854,15 @@
         51004
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 79,
-      "seek": 2828,
-      "start": 233.9906,
-      "end": 237.0906,
+      "id": 82,
+      "seek": 2830,
+      "start": 233.98286,
+      "end": 237.08287,
       "text": " já que é um hardware dedicado para fazer essa tarefa, a gente não deve encontrar nenhum problema.",
       "tokens": [
         51007,
@@ -2871,15 +2890,15 @@
         51162
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 80,
-      "seek": 2828,
-      "start": 237.2306,
-      "end": 238.61061,
+      "id": 83,
+      "seek": 2830,
+      "start": 237.22287,
+      "end": 238.60287,
       "text": " Vamos ver aqui, está chegando já no final.",
       "tokens": [
         51169,
@@ -2897,18 +2916,18 @@
         51238
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 81,
-      "seek": 2828,
-      "start": 238.7706,
-      "end": 240.61061,
+      "id": 84,
+      "seek": 2830,
+      "start": 238.74286,
+      "end": 240.60287,
       "text": " Depois a gente pode fazer uma comparação de imagem.",
       "tokens": [
-        51246,
+        51245,
         34231,
         257,
         3788,
@@ -2924,15 +2943,15 @@
         51338
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 82,
-      "seek": 2828,
-      "start": 240.7306,
-      "end": 242.91061,
+      "id": 85,
+      "seek": 2830,
+      "start": 240.72287,
+      "end": 242.90286,
       "text": " Para que a gente possa comparar a imagem, a gente vai utilizar o YCAT.",
       "tokens": [
         51344,
@@ -2958,15 +2977,15 @@
         51453
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 83,
-      "seek": 2828,
-      "start": 242.97061,
-      "end": 247.33061,
+      "id": 86,
+      "seek": 2830,
+      "start": 242.96286,
+      "end": 247.34286,
       "text": " Eu vou fazer a configuração idêntica, a configuração do codificador H.264 vai ser idêntica,",
       "tokens": [
         51456,
@@ -3001,18 +3020,18 @@
         580,
         2262,
         11,
-        51674
+        51675
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 84,
-      "seek": 2828,
-      "start": 247.39061,
-      "end": 248.9306,
+      "id": 87,
+      "seek": 2830,
+      "start": 247.38287,
+      "end": 248.94287,
       "text": " para que a gente possa comparar, vai ser os mesmos 1500.",
       "tokens": [
         51677,
@@ -3031,18 +3050,18 @@
         3415,
         22671,
         13,
-        51754
+        51755
       ],
       "temperature": 0,
-      "avg_logprob": -0.08362291,
+      "avg_logprob": -0.08339375,
       "compression_ratio": 1.9525,
-      "no_speech_prob": 0.00781383
+      "no_speech_prob": 0.00857435
     },
     {
-      "id": 85,
-      "seek": 5606,
-      "start": 248.9306,
-      "end": 251.19061,
+      "id": 88,
+      "seek": 5610,
+      "start": 248.94287,
+      "end": 251.18286,
       "text": " Então a gente já fez aqui no caso a conversão",
       "tokens": [
         50365,
@@ -3057,21 +3076,21 @@
         257,
         2615,
         1076,
-        50478
+        50477
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 86,
-      "seek": 5606,
-      "start": 251.19061,
-      "end": 252.11061,
+      "id": 89,
+      "seek": 5610,
+      "start": 251.18286,
+      "end": 252.10287,
       "text": " A gente pode ver aqui o arquivo",
       "tokens": [
-        50478,
+        50477,
         316,
         3788,
         7468,
@@ -3080,21 +3099,21 @@
         277,
         40258,
         6340,
-        50524
+        50523
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 87,
-      "seek": 5606,
-      "start": 252.11061,
-      "end": 253.0906,
+      "id": 90,
+      "seek": 5610,
+      "start": 252.10287,
+      "end": 253.08287,
       "text": " Ficou mais ou menos a metade",
       "tokens": [
-        50524,
+        50523,
         479,
         299,
         263,
@@ -3104,21 +3123,21 @@
         257,
         1131,
         762,
-        50573
+        50572
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 88,
-      "seek": 5606,
-      "start": 253.0906,
-      "end": 254.6506,
+      "id": 91,
+      "seek": 5610,
+      "start": 253.08287,
+      "end": 254.64287,
       "text": " Mais ou menos a metade com o benchmark constante",
       "tokens": [
-        50573,
+        50572,
         6313,
         2820,
         8902,
@@ -3129,24 +3148,24 @@
         277,
         18927,
         47343,
-        50651
+        50650
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 89,
-      "seek": 5606,
-      "start": 254.6506,
-      "end": 255.6506,
-      "text": " A qualidade da imagem ainda é boa",
+      "id": 92,
+      "seek": 5610,
+      "start": 254.64287,
+      "end": 255.66287,
+      "text": " A qualidade de imagem ainda é boa",
       "tokens": [
-        50651,
+        50650,
         316,
         41501,
-        1120,
+        368,
         43824,
         11804,
         1136,
@@ -3154,15 +3173,15 @@
         50701
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 90,
-      "seek": 5606,
-      "start": 255.6506,
-      "end": 257.85062,
+      "id": 93,
+      "seek": 5610,
+      "start": 255.66287,
+      "end": 257.84286,
       "text": " Depende bastante do preset que a gente estiver utilizando",
       "tokens": [
         50701,
@@ -3177,21 +3196,21 @@
         46578,
         19906,
         1806,
-        50811
+        50810
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 91,
-      "seek": 5606,
-      "start": 257.85062,
-      "end": 258.7306,
+      "id": 94,
+      "seek": 5610,
+      "start": 257.84286,
+      "end": 258.72287,
       "text": " Já que a gente está usando o FAS",
       "tokens": [
-        50811,
+        50810,
         21237,
         631,
         257,
@@ -3201,21 +3220,21 @@
         277,
         479,
         3160,
-        50855
+        50854
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 92,
-      "seek": 5606,
-      "start": 258.7306,
-      "end": 259.85062,
+      "id": 95,
+      "seek": 5610,
+      "start": 258.72287,
+      "end": 259.84286,
       "text": " Vai ter um pouco mais de compressão",
       "tokens": [
-        50855,
+        50854,
         24206,
         1796,
         1105,
@@ -3224,21 +3243,21 @@
         368,
         14778,
         1076,
-        50911
+        50910
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 93,
-      "seek": 5606,
-      "start": 259.85062,
-      "end": 260.9706,
+      "id": 96,
+      "seek": 5610,
+      "start": 259.84286,
+      "end": 260.96286,
       "text": " Alguns artefatos de compressão",
       "tokens": [
-        50911,
+        50910,
         46816,
         82,
         29159,
@@ -3247,44 +3266,46 @@
         368,
         14778,
         1076,
-        50967
+        50966
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 94,
-      "seek": 5606,
-      "start": 260.9706,
-      "end": 262.01062,
-      "text": " Ok, a qualidade já ficou bacana",
+      "id": 97,
+      "seek": 5610,
+      "start": 260.96286,
+      "end": 262.00287,
+      "text": " Ok, a qualidade eu acho que ficou bacana",
       "tokens": [
-        50967,
+        50966,
         3477,
         11,
         257,
         41501,
-        6242,
+        2228,
+        14253,
+        631,
         25518,
         6857,
         2095,
-        51019
+        51018
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 95,
-      "seek": 5606,
-      "start": 262.01062,
-      "end": 263.4706,
+      "id": 98,
+      "seek": 5610,
+      "start": 262.00287,
+      "end": 263.46286,
       "text": " Já que o arquivo vai ter um benchmark constante",
       "tokens": [
-        51019,
+        51018,
         21237,
         631,
         277,
@@ -3295,21 +3316,21 @@
         1105,
         18927,
         47343,
-        51092
+        51091
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 96,
-      "seek": 5606,
-      "start": 263.4706,
-      "end": 265.1906,
+      "id": 99,
+      "seek": 5610,
+      "start": 263.46286,
+      "end": 265.18286,
       "text": " Agora a gente vai fazer com o H.264",
       "tokens": [
-        51092,
+        51091,
         16023,
         257,
         3788,
@@ -3321,21 +3342,21 @@
         13,
         10880,
         19,
-        51178
+        51177
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 97,
-      "seek": 5606,
-      "start": 265.1906,
-      "end": 266.1106,
+      "id": 100,
+      "seek": 5610,
+      "start": 265.18286,
+      "end": 266.12286,
       "text": " A gente vai limpar a tela",
       "tokens": [
-        51178,
+        51177,
         316,
         3788,
         4405,
@@ -3346,15 +3367,15 @@
         51224
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 98,
-      "seek": 5606,
-      "start": 266.1106,
-      "end": 267.7506,
+      "id": 101,
+      "seek": 5610,
+      "start": 266.12286,
+      "end": 267.74286,
       "text": " A gente vai começar com FFmpeg",
       "tokens": [
         51224,
@@ -3368,21 +3389,21 @@
         76,
         494,
         70,
-        51306
+        51305
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 99,
-      "seek": 5606,
-      "start": 267.7506,
-      "end": 268.9306,
+      "id": 102,
+      "seek": 5610,
+      "start": 267.74286,
+      "end": 268.92285,
       "text": " A-I, A-I",
       "tokens": [
-        51306,
+        51305,
         316,
         12,
         40,
@@ -3390,60 +3411,60 @@
         316,
         12,
         40,
-        51365
+        51364
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 100,
-      "seek": 5606,
-      "start": 268.9306,
-      "end": 269.9706,
+      "id": 103,
+      "seek": 5610,
+      "start": 268.92285,
+      "end": 269.96286,
       "text": " Input.mp4",
       "tokens": [
-        51365,
+        51364,
         682,
         2582,
         13,
         2455,
         19,
-        51417
+        51416
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 101,
-      "seek": 5606,
-      "start": 269.9706,
-      "end": 271.0306,
-      "text": " Menos C, barra B",
+      "id": 104,
+      "seek": 5610,
+      "start": 269.96286,
+      "end": 271.04288,
+      "text": " Menos C, barra V",
       "tokens": [
-        51417,
+        51416,
         6685,
         329,
         383,
         11,
         2159,
         424,
-        363,
+        691,
         51470
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 102,
-      "seek": 5606,
-      "start": 271.0306,
-      "end": 272.5306,
+      "id": 105,
+      "seek": 5610,
+      "start": 271.04288,
+      "end": 272.50287,
       "text": " A gente vai usar aqui H.264",
       "tokens": [
         51470,
@@ -3456,40 +3477,40 @@
         13,
         10880,
         19,
-        51545
+        51543
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 103,
-      "seek": 5606,
-      "start": 272.5306,
-      "end": 273.29062,
+      "id": 106,
+      "seek": 5610,
+      "start": 272.50287,
+      "end": 273.28287,
       "text": " H.264",
       "tokens": [
-        51545,
+        51543,
         389,
         13,
         10880,
         19,
-        51583
+        51582
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 104,
-      "seek": 5606,
-      "start": 273.29062,
-      "end": 274.4906,
+      "id": 107,
+      "seek": 5610,
+      "start": 273.28287,
+      "end": 274.50287,
       "text": " Underscore anything",
       "tokens": [
-        51583,
+        51582,
         2719,
         433,
         12352,
@@ -3497,16 +3518,16 @@
         51643
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 105,
-      "seek": 5606,
-      "start": 274.4906,
-      "end": 277.57062,
-      "text": " O preset a gente pode utilizar o P4 ou P5",
+      "id": 108,
+      "seek": 5610,
+      "start": 274.50287,
+      "end": 277.56287,
+      "text": " O preset a gente pode utilizar o P4 ou o P5",
       "tokens": [
         51643,
         422,
@@ -3519,21 +3540,22 @@
         430,
         19,
         2820,
+        277,
         430,
         20,
-        51797
+        51796
       ],
       "temperature": 0,
-      "avg_logprob": -0.121857986,
-      "compression_ratio": 1.9051725,
-      "no_speech_prob": 0.12050305
+      "avg_logprob": -0.12396874,
+      "compression_ratio": 1.9065156,
+      "no_speech_prob": 0.14754388
     },
     {
-      "id": 106,
-      "seek": 8470,
-      "start": 277.57062,
-      "end": 279.4706,
-      "text": " Vou usar o P5 que é um preset bacana",
+      "id": 109,
+      "seek": 8472,
+      "start": 277.56287,
+      "end": 279.38287,
+      "text": " Vou usar o P5, que é um preset bacana.",
       "tokens": [
         50365,
         24361,
@@ -3541,27 +3563,29 @@
         277,
         430,
         20,
+        11,
         631,
         1136,
         1105,
         32081,
         6857,
         2095,
-        50460
+        13,
+        50456
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 107,
-      "seek": 8470,
-      "start": 279.4706,
-      "end": 281.9706,
-      "text": " Menos V, a menos BV, vai ser 1500K",
+      "id": 110,
+      "seek": 8472,
+      "start": 279.50287,
+      "end": 281.86285,
+      "text": " Menos V, a menos BV, vai ser 1500K.",
       "tokens": [
-        50460,
+        50462,
         6685,
         329,
         691,
@@ -3575,141 +3599,194 @@
         816,
         22671,
         42,
-        50585
+        13,
+        50580
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 108,
-      "seek": 8470,
-      "start": 281.9706,
-      "end": 284.6706,
-      "text": " E o Buff Size vai ser 6000",
+      "id": 111,
+      "seek": 8472,
+      "start": 281.98285,
+      "end": 284.5829,
+      "text": " E o bobsize vai ser 6.000.",
       "tokens": [
-        50585,
+        50586,
         462,
         277,
-        20254,
-        35818,
+        748,
+        929,
+        1125,
         4405,
         816,
-        41789,
-        50720
+        1386,
+        13,
+        1360,
+        13,
+        50716
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 109,
-      "seek": 8470,
-      "start": 284.6706,
-      "end": 288.95062,
-      "text": " E a saída vai ser Output H264.mp4",
+      "id": 112,
+      "seek": 8472,
+      "start": 284.68286,
+      "end": 288.98285,
+      "text": " E a saída vai ser output H264.mp4.",
       "tokens": [
-        50720,
+        50721,
         462,
         257,
         601,
         39080,
         4405,
         816,
-        5925,
-        2582,
+        5598,
         389,
         10880,
         19,
         13,
         2455,
         19,
-        50934
+        13,
+        50936
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 110,
-      "seek": 8470,
-      "start": 288.95062,
-      "end": 290.95062,
-      "text": " Então, ok, não achei",
+      "id": 113,
+      "seek": 8472,
+      "start": 289.00287,
+      "end": 289.50287,
+      "text": " Então, ok.",
       "tokens": [
-        50934,
+        50937,
         6469,
         11,
         3133,
-        11,
-        2431,
-        44961,
-        51034
+        13,
+        50962
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 111,
-      "seek": 8470,
-      "start": 290.95062,
-      "end": 292.29062,
-      "text": " P5, né? P5 não existe",
+      "id": 114,
+      "seek": 8472,
+      "start": 290.10287,
+      "end": 290.78287,
+      "text": " Não achei.",
       "tokens": [
-        51034,
+        50992,
+        8010,
+        44961,
+        13,
+        51026
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
+    },
+    {
+      "id": 115,
+      "seek": 8472,
+      "start": 291.04288,
+      "end": 291.46286,
+      "text": " P5, né?",
+      "tokens": [
+        51039,
         430,
         20,
         11,
         7024,
         30,
+        51060
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
+    },
+    {
+      "id": 116,
+      "seek": 8472,
+      "start": 291.50287,
+      "end": 292.24286,
+      "text": " P5 não existe.",
+      "tokens": [
+        51062,
         430,
         20,
         2431,
         16304,
-        51101
+        13,
+        51099
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 112,
-      "seek": 8470,
-      "start": 292.29062,
-      "end": 294.2506,
-      "text": " Vamos lá, menos preset, decidi passar o preset",
+      "id": 117,
+      "seek": 8472,
+      "start": 292.34286,
+      "end": 293.28287,
+      "text": " Vamos lá, menos preset.",
       "tokens": [
-        51101,
+        51104,
         10894,
         7453,
         11,
         8902,
         32081,
-        11,
-        979,
+        13,
+        51151
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
+    },
+    {
+      "id": 118,
+      "seek": 8472,
+      "start": 293.36285,
+      "end": 294.0829,
+      "text": " Decidi passar o preset.",
+      "tokens": [
+        51155,
+        12427,
         12716,
         20630,
         277,
         32081,
-        51199
+        13,
+        51191
       ],
       "temperature": 0,
-      "avg_logprob": -0.27101007,
-      "compression_ratio": 1.6424242,
-      "no_speech_prob": 0.00067062635
+      "avg_logprob": -0.22474183,
+      "compression_ratio": 1.6498517,
+      "no_speech_prob": 0.00027561406
     },
     {
-      "id": 113,
+      "id": 119,
       "seek": 294,
-      "start": 294.2506,
-      "end": 305.5759,
-      "text": " Ok a gente pode ver que a velocidade aqui est em 5 Est um pouco mais r vamos ver qual o uso da placa de v A gente est usando bastante o quadrificador de v voc podem ver aqui que agora t em 100 t usando um pouco do processador provavelmente pra fazer a dedo de quadrifica do arquivo de v n",
+      "start": 294.24286,
+      "end": 305.37433,
+      "text": " Ok a gente pode ver que a velocidade aqui est em 5 Est um pouco mais r Vamos ver qual o uso da placa de v A gente estava usando bastante o certificador de v Voc podem ver aqui que agora est em 100 Est usando um pouco do processador provavelmente para fazer a identifica do arquivo de v",
       "tokens": [
         51199,
         3477,
@@ -3725,15 +3802,18 @@
         3192,
         846,
         1025,
-        51299,
-        51299,
+        13,
+        51296,
+        51300,
         27304,
         1105,
         13920,
         2420,
         24893,
-        11,
-        5295,
+        13,
+        51331,
+        51335,
+        10894,
         1306,
         4101,
         1136,
@@ -3744,34 +3824,36 @@
         6628,
         368,
         8071,
-        51409,
-        51409,
+        13,
+        51408,
+        51411,
         316,
         3788,
-        3192,
+        15662,
         29798,
         14651,
         277,
-        10787,
-        81,
-        1089,
+        277,
+        12378,
         5409,
         368,
         8071,
-        11,
-        10522,
+        13,
+        50674,
+        50680,
+        40262,
         20934,
         1306,
         3871,
         631,
         9851,
-        7737,
+        3192,
         846,
         2319,
-        8923,
-        50746,
-        50746,
-        7737,
+        6856,
+        50753,
+        50753,
+        27304,
         29798,
         1105,
         13920,
@@ -3781,41 +3863,34 @@
         11,
         28959,
         39786,
-        3206,
+        1690,
         6736,
         257,
-        4172,
-        78,
-        368,
-        10787,
-        81,
-        1089,
+        49456,
         6670,
         360,
         40258,
         6340,
         368,
         8071,
-        11,
-        7024,
-        11,
-        50908
+        13,
+        50900
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 114,
+      "id": 120,
       "seek": 294,
-      "start": 305.69592,
-      "end": 309.4959,
-      "text": " agora tá realmente em 100% a placa de vídeo fazendo essa compressão.",
+      "start": 305.71432,
+      "end": 309.55432,
+      "text": " Agora está realmente em 100% a placa de vídeo fazendo essa compressão.",
       "tokens": [
-        50914,
-        9851,
-        7737,
+        50917,
+        16023,
+        3192,
         14446,
         846,
         2319,
@@ -3830,21 +3905,21 @@
         14778,
         1076,
         13,
-        51104
+        51109
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 115,
+      "id": 121,
       "seek": 294,
-      "start": 309.5559,
-      "end": 314.8359,
-      "text": " Se a gente alterasse o preset de P5 para P4 ou P3, a gente alcançaria uma velocidade melhor,",
+      "start": 309.6343,
+      "end": 314.9143,
+      "text": " Se a gente alterasse o preset de P5 para P4 ou P3, a gente alcançaria uma velocidade melhor.",
       "tokens": [
-        51107,
+        51113,
         1100,
         257,
         3788,
@@ -3871,25 +3946,25 @@
         2772,
         45181,
         13714,
-        11,
-        51371
+        13,
+        51377
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 116,
+      "id": 122,
       "seek": 294,
-      "start": 315.0159,
-      "end": 317.09592,
-      "text": " a gente tá tentando manter uma boa qualidade de imagem.",
+      "start": 315.11432,
+      "end": 317.15433,
+      "text": " A gente está tentando manter uma boa qualidade de imagem.",
       "tokens": [
-        51380,
-        257,
+        51387,
+        316,
         3788,
-        7737,
+        3192,
         7054,
         1806,
         48170,
@@ -3899,21 +3974,21 @@
         368,
         43824,
         13,
-        51484
+        51489
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 117,
+      "id": 123,
       "seek": 294,
-      "start": 317.2359,
-      "end": 320.5559,
-      "text": " A gente pode ver que aqui a gente ainda tá mais rápido, que o preset X2004 test em CPU,",
+      "start": 317.15433,
+      "end": 320.6343,
+      "text": " A gente pode ver que aqui a gente ainda está mais rápido que o preset X2004 Fast em CPU.",
       "tokens": [
-        51491,
+        51489,
         316,
         3788,
         7468,
@@ -3923,40 +3998,39 @@
         257,
         3788,
         11804,
-        7737,
+        3192,
         2420,
         24893,
-        11,
         631,
         277,
         32081,
         1783,
         7629,
         19,
-        1500,
+        15968,
         846,
         13199,
-        11,
-        51657
+        13,
+        51663
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 118,
+      "id": 124,
       "seek": 294,
-      "start": 320.6759,
-      "end": 323.97592,
-      "text": " a gente ainda vai pegar mais ou menos 4.5x, agora a gente tá mais ou menos em 5.9,",
+      "start": 320.7543,
+      "end": 322.15433,
+      "text": " A gente estava pegando mais ou menos 4.5x.",
       "tokens": [
-        51663,
-        257,
+        51669,
+        316,
         3788,
-        11804,
-        4405,
-        22418,
+        15662,
+        17199,
+        1806,
         2420,
         2820,
         8902,
@@ -3964,11 +4038,26 @@
         13,
         20,
         87,
-        11,
-        9851,
+        13,
+        51739
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
+    },
+    {
+      "id": 125,
+      "seek": 294,
+      "start": 322.93433,
+      "end": 324.05432,
+      "text": " Agora a gente está mais ou menos em 5.9.",
+      "tokens": [
+        51778,
+        16023,
         257,
         3788,
-        7737,
+        3192,
         2420,
         2820,
         8902,
@@ -3976,19 +4065,19 @@
         1025,
         13,
         24,
-        11,
-        51828
+        13,
+        51834
       ],
       "temperature": 0,
-      "avg_logprob": -0.14355312,
-      "compression_ratio": 2.0027473,
-      "no_speech_prob": 0.1110363
+      "avg_logprob": -0.11077232,
+      "compression_ratio": 2.027701,
+      "no_speech_prob": 0.016901432
     },
     {
-      "id": 119,
-      "seek": 3220,
-      "start": 323.97592,
-      "end": 325.25592,
+      "id": 126,
+      "seek": 3232,
+      "start": 324.05432,
+      "end": 325.33432,
       "text": " Então a gente ainda está com uma qualificação mais rápida",
       "tokens": [
         50365,
@@ -4008,15 +4097,15 @@
         50429
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 120,
-      "seek": 3220,
-      "start": 325.25592,
-      "end": 326.97592,
+      "id": 127,
+      "seek": 3232,
+      "start": 325.33432,
+      "end": 327.05432,
       "text": " E a gente provavelmente vai conseguir uma qualidade de imagem melhor",
       "tokens": [
         50429,
@@ -4035,15 +4124,15 @@
         50515
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 121,
-      "seek": 3220,
-      "start": 326.97592,
-      "end": 329.0159,
+      "id": 128,
+      "seek": 3232,
+      "start": 327.05432,
+      "end": 329.0943,
       "text": " Utilizando a placa de vídeo para fazer esse trabalho",
       "tokens": [
         50515,
@@ -4062,15 +4151,15 @@
         50617
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 122,
-      "seek": 3220,
-      "start": 329.0159,
-      "end": 330.09592,
+      "id": 129,
+      "seek": 3232,
+      "start": 329.0943,
+      "end": 330.17432,
       "text": " Então já está chegando em 6 minutos",
       "tokens": [
         50617,
@@ -4085,15 +4174,15 @@
         50671
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 123,
-      "seek": 3220,
-      "start": 330.09592,
-      "end": 331.63593,
+      "id": 130,
+      "seek": 3232,
+      "start": 330.17432,
+      "end": 331.71432,
       "text": " E a gente vai estar utilizando aqui o iCat",
       "tokens": [
         50671,
@@ -4112,15 +4201,15 @@
         50748
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 124,
-      "seek": 3220,
-      "start": 331.63593,
-      "end": 332.6159,
+      "id": 131,
+      "seek": 3232,
+      "start": 331.71432,
+      "end": 332.6943,
       "text": " Que é um programa da NVIDIA",
       "tokens": [
         50748,
@@ -4135,15 +4224,15 @@
         50797
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 125,
-      "seek": 3220,
-      "start": 332.6159,
-      "end": 333.63593,
+      "id": 132,
+      "seek": 3232,
+      "start": 332.6943,
+      "end": 333.71432,
       "text": " Que eu recomendo que vocês utilizem",
       "tokens": [
         50797,
@@ -4158,15 +4247,15 @@
         50848
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 126,
-      "seek": 3220,
-      "start": 333.63593,
-      "end": 335.75592,
+      "id": 133,
+      "seek": 3232,
+      "start": 333.71432,
+      "end": 335.83432,
       "text": " Se vocês quiserem comparar imagens e vídeos",
       "tokens": [
         50848,
@@ -4183,15 +4272,15 @@
         50954
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 127,
-      "seek": 3220,
-      "start": 335.75592,
-      "end": 337.7759,
+      "id": 134,
+      "seek": 3232,
+      "start": 335.83432,
+      "end": 337.8543,
       "text": " Geralmente é utilizado para comparar arquivos de vídeo",
       "tokens": [
         50954,
@@ -4210,15 +4299,15 @@
         51055
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 128,
-      "seek": 3220,
-      "start": 337.7759,
-      "end": 340.41592,
+      "id": 135,
+      "seek": 3232,
+      "start": 337.8543,
+      "end": 340.49432,
       "text": " Para que a gente possa ver diferenças na qualidade visual",
       "tokens": [
         51055,
@@ -4236,15 +4325,15 @@
         51187
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 129,
-      "seek": 3220,
-      "start": 340.41592,
-      "end": 341.1559,
+      "id": 136,
+      "seek": 3232,
+      "start": 340.49432,
+      "end": 341.2343,
       "text": " É um programa muito bom",
       "tokens": [
         51187,
@@ -4256,15 +4345,15 @@
         51224
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 130,
-      "seek": 3220,
-      "start": 341.1559,
-      "end": 342.19592,
+      "id": 137,
+      "seek": 3232,
+      "start": 341.2343,
+      "end": 342.27432,
       "text": " Eu recomendo que vocês realmente utilizem",
       "tokens": [
         51224,
@@ -4279,15 +4368,15 @@
         51276
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 131,
-      "seek": 3220,
-      "start": 342.19592,
-      "end": 343.53592,
+      "id": 138,
+      "seek": 3232,
+      "start": 342.27432,
+      "end": 343.61432,
       "text": " Se vocês quiserem fazer esse tipo de teste",
       "tokens": [
         51276,
@@ -4303,15 +4392,15 @@
         51343
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 132,
-      "seek": 3220,
-      "start": 343.53592,
-      "end": 344.5559,
+      "id": 139,
+      "seek": 3232,
+      "start": 343.61432,
+      "end": 344.6343,
       "text": " Então a gente está chegando no final",
       "tokens": [
         51343,
@@ -4326,15 +4415,15 @@
         51394
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 133,
-      "seek": 3220,
-      "start": 344.5559,
-      "end": 346.0559,
+      "id": 140,
+      "seek": 3232,
+      "start": 344.6343,
+      "end": 346.1343,
       "text": " Já vai em 9 minutos",
       "tokens": [
         51394,
@@ -4346,15 +4435,15 @@
         51469
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 134,
-      "seek": 3220,
-      "start": 346.0559,
-      "end": 346.9959,
+      "id": 141,
+      "seek": 3232,
+      "start": 346.1343,
+      "end": 347.0743,
       "text": " Então o vídeo tem 10 minutos",
       "tokens": [
         51469,
@@ -4367,15 +4456,15 @@
         51516
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 135,
-      "seek": 3220,
-      "start": 346.9959,
-      "end": 347.8959,
+      "id": 142,
+      "seek": 3232,
+      "start": 347.0743,
+      "end": 347.9743,
       "text": " A gente já está quase no final",
       "tokens": [
         51516,
@@ -4389,15 +4478,15 @@
         51561
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 136,
-      "seek": 3220,
-      "start": 347.8959,
-      "end": 348.53592,
+      "id": 143,
+      "seek": 3232,
+      "start": 347.9743,
+      "end": 348.61432,
       "text": " Está chegando no final",
       "tokens": [
         51561,
@@ -4409,15 +4498,15 @@
         51593
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 137,
-      "seek": 3220,
-      "start": 348.53592,
-      "end": 348.8359,
+      "id": 144,
+      "seek": 3232,
+      "start": 348.61432,
+      "end": 348.9143,
       "text": " Feito",
       "tokens": [
         51593,
@@ -4426,15 +4515,15 @@
         51608
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 138,
-      "seek": 3220,
-      "start": 348.8359,
-      "end": 349.7159,
+      "id": 145,
+      "seek": 3232,
+      "start": 348.9143,
+      "end": 349.81433,
       "text": " Então a gente aqui tem um arquivo",
       "tokens": [
         51608,
@@ -4446,21 +4535,21 @@
         1105,
         40258,
         6340,
-        51652
+        51653
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 139,
-      "seek": 3220,
-      "start": 349.7159,
-      "end": 350.37592,
+      "id": 146,
+      "seek": 3232,
+      "start": 349.81433,
+      "end": 350.4543,
       "text": " Esse arquivo aqui",
       "tokens": [
-        51652,
+        51653,
         18814,
         40258,
         6340,
@@ -4468,15 +4557,15 @@
         51685
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 140,
-      "seek": 3220,
-      "start": 350.37592,
-      "end": 350.81592,
+      "id": 147,
+      "seek": 3232,
+      "start": 350.4543,
+      "end": 350.89432,
       "text": " Se a gente abrir",
       "tokens": [
         51685,
@@ -4487,15 +4576,15 @@
         51707
       ],
       "temperature": 0,
-      "avg_logprob": -0.06328734,
+      "avg_logprob": -0.060796726,
       "compression_ratio": 2.1133502,
-      "no_speech_prob": 0.007457779
+      "no_speech_prob": 0.006385995
     },
     {
-      "id": 141,
-      "seek": 5904,
-      "start": 350.81592,
-      "end": 352.3359,
+      "id": 148,
+      "seek": 5916,
+      "start": 350.89432,
+      "end": 352.4143,
       "text": " A gente pode ver aqui a qualidade visual",
       "tokens": [
         50365,
@@ -4510,15 +4599,15 @@
         50441
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 142,
-      "seek": 5904,
-      "start": 352.3359,
-      "end": 353.4359,
+      "id": 149,
+      "seek": 5916,
+      "start": 352.4143,
+      "end": 353.5143,
       "text": " E para que a gente possa ver lado a lado",
       "tokens": [
         50441,
@@ -4535,15 +4624,15 @@
         50496
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 143,
-      "seek": 5904,
-      "start": 353.4359,
-      "end": 354.6559,
+      "id": 150,
+      "seek": 5916,
+      "start": 353.5143,
+      "end": 354.7343,
       "text": " Primeiro vamos abrir o X264",
       "tokens": [
         50496,
@@ -4558,23 +4647,22 @@
         50557
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 144,
-      "seek": 5904,
-      "start": 354.6559,
-      "end": 355.9359,
-      "text": " E vamos selecionar aqui o H264",
+      "id": 151,
+      "seek": 5916,
+      "start": 354.7343,
+      "end": 356.0143,
+      "text": " E vamos acionar aqui o H264",
       "tokens": [
         50557,
         462,
         5295,
-        23264,
-        10015,
-        289,
+        696,
+        33639,
         3871,
         277,
         389,
@@ -4583,44 +4671,47 @@
         50621
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 145,
-      "seek": 5904,
-      "start": 355.9359,
-      "end": 357.1159,
-      "text": " A gente também pode selecionar a entrada",
+      "id": 152,
+      "seek": 5916,
+      "start": 356.0143,
+      "end": 357.33432,
+      "text": " A gente também pode acionar a entrada, né?",
       "tokens": [
         50621,
         316,
         3788,
         6274,
         7468,
-        23264,
-        10015,
-        289,
+        696,
+        33639,
         257,
         37119,
-        50680
+        11,
+        7024,
+        30,
+        50687
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 146,
-      "seek": 5904,
-      "start": 357.1159,
-      "end": 358.1159,
-      "text": " No caso o arquivo original",
+      "id": 153,
+      "seek": 5916,
+      "start": 357.3543,
+      "end": 358.1943,
+      "text": " No caso, o arquivo original",
       "tokens": [
-        50680,
+        50688,
         883,
         9666,
+        11,
         277,
         40258,
         6340,
@@ -4628,15 +4719,15 @@
         50730
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 147,
-      "seek": 5904,
-      "start": 358.1159,
-      "end": 359.2959,
+      "id": 154,
+      "seek": 5916,
+      "start": 358.1943,
+      "end": 359.3543,
       "text": " Então a gente tem comparação completa",
       "tokens": [
         50730,
@@ -4648,21 +4739,21 @@
         2419,
         2917,
         46822,
-        50789
+        50788
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 148,
-      "seek": 5904,
-      "start": 359.2959,
-      "end": 360.5559,
+      "id": 155,
+      "seek": 5916,
+      "start": 359.3543,
+      "end": 360.6343,
       "text": " Se a gente reproduzir o arquivo",
       "tokens": [
-        50789,
+        50788,
         1100,
         257,
         3788,
@@ -4675,15 +4766,15 @@
         50852
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 149,
-      "seek": 5904,
-      "start": 360.5559,
-      "end": 361.19592,
+      "id": 156,
+      "seek": 5916,
+      "start": 360.6343,
+      "end": 361.27432,
       "text": " A gente pode ver",
       "tokens": [
         50852,
@@ -4694,15 +4785,15 @@
         50884
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 150,
-      "seek": 5904,
-      "start": 361.19592,
-      "end": 362.87592,
+      "id": 157,
+      "seek": 5916,
+      "start": 361.27432,
+      "end": 362.9543,
       "text": " A gente tem que lembrar que aqui é o original",
       "tokens": [
         50884,
@@ -4720,15 +4811,15 @@
         50968
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 151,
-      "seek": 5904,
-      "start": 362.87592,
-      "end": 364.7159,
+      "id": 158,
+      "seek": 5916,
+      "start": 362.9543,
+      "end": 364.7943,
       "text": " O H264 e o X264",
       "tokens": [
         50968,
@@ -4744,15 +4835,15 @@
         51060
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 152,
-      "seek": 5904,
-      "start": 364.7159,
-      "end": 366.2759,
+      "id": 159,
+      "seek": 5916,
+      "start": 364.7943,
+      "end": 366.33432,
       "text": " Em algumas partes eu acho que",
       "tokens": [
         51060,
@@ -4762,37 +4853,37 @@
         2228,
         14253,
         631,
-        51138
+        51137
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 153,
-      "seek": 5904,
-      "start": 366.2759,
-      "end": 366.75592,
-      "text": " Se eu ver aqui",
+      "id": 160,
+      "seek": 5916,
+      "start": 366.33432,
+      "end": 366.83432,
+      "text": " Se eu vir aqui",
       "tokens": [
-        51138,
+        51137,
         1100,
         2228,
-        1306,
+        4107,
         3871,
         51162
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 154,
-      "seek": 5904,
-      "start": 366.75592,
-      "end": 369.19592,
+      "id": 161,
+      "seek": 5916,
+      "start": 366.83432,
+      "end": 369.27432,
       "text": " O X264 e o H264 são bem comparáveis",
       "tokens": [
         51162,
@@ -4812,16 +4903,16 @@
         51284
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 155,
-      "seek": 5904,
-      "start": 369.19592,
-      "end": 370.8959,
-      "text": " Principalmente nessa qualidade visual",
+      "id": 162,
+      "seek": 5916,
+      "start": 369.27432,
+      "end": 371.1343,
+      "text": " Principalmente nessa qualidade visual, tá?",
       "tokens": [
         51284,
         38575,
@@ -4829,21 +4920,24 @@
         23246,
         41501,
         5056,
-        51369
+        11,
+        7737,
+        30,
+        51377
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 156,
-      "seek": 5904,
-      "start": 370.8959,
-      "end": 371.8959,
+      "id": 163,
+      "seek": 5916,
+      "start": 371.15433,
+      "end": 371.9743,
       "text": " Quando a gente tira o zoom assim",
       "tokens": [
-        51369,
+        51378,
         18725,
         257,
         3788,
@@ -4855,15 +4949,15 @@
         51419
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 157,
-      "seek": 5904,
-      "start": 371.8959,
-      "end": 373.03592,
+      "id": 164,
+      "seek": 5916,
+      "start": 371.9743,
+      "end": 373.1343,
       "text": " A gente pode ver que ainda ficam",
       "tokens": [
         51419,
@@ -4875,21 +4969,21 @@
         11804,
         14591,
         335,
-        51476
+        51477
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 158,
-      "seek": 5904,
-      "start": 373.03592,
-      "end": 374.03592,
+      "id": 165,
+      "seek": 5916,
+      "start": 373.1343,
+      "end": 374.11432,
       "text": " São bem comparáveis",
       "tokens": [
-        51476,
+        51477,
         22401,
         7577,
         6311,
@@ -4897,15 +4991,15 @@
         51526
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 159,
-      "seek": 5904,
-      "start": 374.03592,
-      "end": 375.01593,
+      "id": 166,
+      "seek": 5916,
+      "start": 374.11432,
+      "end": 375.0943,
       "text": " Se a gente pausar aqui",
       "tokens": [
         51526,
@@ -4919,16 +5013,16 @@
         51575
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 160,
-      "seek": 5904,
-      "start": 375.01593,
-      "end": 375.8959,
-      "text": " A gente pode ver que ambos",
+      "id": 167,
+      "seek": 5916,
+      "start": 375.0943,
+      "end": 376.9543,
+      "text": " A gente pode ver que ambos os codecs são bem comparáveis",
       "tokens": [
         51575,
         316,
@@ -4937,22 +5031,7 @@
         1306,
         631,
         41425,
-        51619
-      ],
-      "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
-    },
-    {
-      "id": 161,
-      "seek": 5904,
-      "start": 375.8959,
-      "end": 376.87592,
-      "text": " Os codecs são bem comparáveis",
-      "tokens": [
-        51619,
-        8875,
+        3003,
         3089,
         14368,
         8364,
@@ -4962,15 +5041,15 @@
         51668
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 162,
-      "seek": 5904,
-      "start": 376.87592,
-      "end": 378.2359,
+      "id": 168,
+      "seek": 5916,
+      "start": 376.9543,
+      "end": 378.31433,
       "text": " Só que utilizando a placa de vídeo",
       "tokens": [
         51668,
@@ -4986,197 +5065,319 @@
         51736
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.09851033,
+      "compression_ratio": 2.0055249,
+      "no_speech_prob": 0.010648572
     },
     {
-      "id": 163,
-      "seek": 5904,
-      "start": 378.2359,
-      "end": 379.2159,
-      "text": " É muito mais eficiente",
+      "id": 169,
+      "seek": 8658,
+      "start": 378.31433,
+      "end": 379.5343,
+      "text": " é muito mais eficiente, né?",
       "tokens": [
-        51736,
-        4922,
+        50365,
+        1136,
         4945,
         2420,
         308,
         26863,
-        51785
+        11,
+        7024,
+        30,
+        50426
       ],
       "temperature": 0,
-      "avg_logprob": -0.09323121,
-      "compression_ratio": 2.057637,
-      "no_speech_prob": 0.010165845
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 164,
-      "seek": 8744,
-      "start": 379.2159,
-      "end": 380.9959,
-      "text": " A gente pode ver aqui a diferença visual",
+      "id": 170,
+      "seek": 8658,
+      "start": 379.5743,
+      "end": 380.21432,
+      "text": " A gente pode ver aqui",
       "tokens": [
-        50365,
+        50428,
         316,
         3788,
         7468,
         1306,
         3871,
+        50460
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 171,
+      "seek": 8658,
+      "start": 380.21432,
+      "end": 381.05432,
+      "text": " a diferença visual.",
+      "tokens": [
+        50460,
         257,
         38336,
         5056,
-        50454
+        13,
+        50502
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 165,
-      "seek": 8744,
-      "start": 380.9959,
-      "end": 383.1159,
-      "text": " O H2004 parece ter um pouco mais de qualidade",
+      "id": 172,
+      "seek": 8658,
+      "start": 381.15433,
+      "end": 382.37433,
+      "text": " O H2004 parece ter",
       "tokens": [
-        50454,
+        50507,
         422,
         389,
         7629,
         19,
         14120,
         1796,
+        50568
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 173,
+      "seek": 8658,
+      "start": 382.37433,
+      "end": 383.43433,
+      "text": " um pouco mais de qualidade, né?",
+      "tokens": [
+        50568,
         1105,
         13920,
         2420,
         368,
         41501,
-        50560
+        11,
+        7024,
+        30,
+        50621
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 166,
-      "seek": 8744,
-      "start": 383.1159,
-      "end": 385.37592,
-      "text": " Do que o X2004, mas mesmo assim",
+      "id": 174,
+      "seek": 8658,
+      "start": 383.4743,
+      "end": 384.83432,
+      "text": " Aqui, do que o X2004,",
       "tokens": [
-        50560,
-        1144,
+        50623,
+        23089,
+        11,
+        360,
         631,
         277,
         1783,
         7629,
         19,
         11,
+        50691
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 175,
+      "seek": 8658,
+      "start": 384.89432,
+      "end": 385.4543,
+      "text": " mas mesmo assim,",
+      "tokens": [
+        50694,
         2300,
         9082,
         8249,
-        50673
+        11,
+        50722
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 167,
-      "seek": 8744,
-      "start": 385.37592,
-      "end": 386.4159,
-      "text": " Acho que são bem comparáveis",
+      "id": 176,
+      "seek": 8658,
+      "start": 385.5943,
+      "end": 386.4743,
+      "text": " acho que são bem comparáveis.",
       "tokens": [
-        50673,
-        40731,
+        50729,
+        14253,
         631,
         8364,
         7577,
         6311,
         42530,
-        50725
+        13,
+        50773
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 168,
-      "seek": 8744,
-      "start": 386.4159,
-      "end": 389.4559,
-      "text": " E aqui a gente pode ver o arquivo original, que não tem uma taxa de bitrate constante",
+      "id": 177,
+      "seek": 8658,
+      "start": 386.5343,
+      "end": 387.11432,
+      "text": " E aqui a gente pode ver",
       "tokens": [
-        50725,
+        50776,
         462,
         3871,
         257,
         3788,
         7468,
         1306,
+        50805
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 178,
+      "seek": 8658,
+      "start": 387.11432,
+      "end": 387.8543,
+      "text": " o arquivo original,",
+      "tokens": [
+        50805,
         277,
         40258,
         6340,
         3380,
         11,
+        50842
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 179,
+      "seek": 8658,
+      "start": 388.0143,
+      "end": 388.83432,
+      "text": " que não tem uma taxa",
+      "tokens": [
+        50850,
         631,
         2431,
         1383,
         2772,
         3366,
         64,
+        50891
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 180,
+      "seek": 8658,
+      "start": 388.83432,
+      "end": 389.5343,
+      "text": " de bitrate constante.",
+      "tokens": [
+        50891,
         368,
         857,
         4404,
         47343,
-        50877
+        13,
+        50926
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 169,
-      "seek": 8744,
-      "start": 389.4559,
-      "end": 391.2959,
-      "text": " E a gente pode ver mais ou menos as diferenças em qualidade",
+      "id": 181,
+      "seek": 8658,
+      "start": 389.65433,
+      "end": 390.4143,
+      "text": " E a gente pode ver, mais ou menos,",
       "tokens": [
-        50877,
+        50932,
         462,
         257,
         3788,
         7468,
         1306,
+        11,
         2420,
         2820,
         8902,
+        11,
+        50970
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 182,
+      "seek": 8658,
+      "start": 390.43433,
+      "end": 391.55432,
+      "text": " as diferenças em qualidade, né?",
+      "tokens": [
+        50971,
         382,
         18959,
         20016,
         846,
         41501,
-        50969
+        11,
+        7024,
+        30,
+        51027
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 170,
-      "seek": 8744,
-      "start": 391.2959,
-      "end": 392.6559,
-      "text": " E eu acho que ficou bacana",
+      "id": 183,
+      "seek": 8658,
+      "start": 391.5943,
+      "end": 392.83432,
+      "text": " E eu acho que ficou bacana, né?",
       "tokens": [
-        50969,
+        51029,
         462,
         2228,
         14253,
@@ -5184,45 +5385,68 @@
         25518,
         6857,
         2095,
-        51037
+        11,
+        7024,
+        30,
+        51091
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 171,
-      "seek": 8744,
-      "start": 392.6559,
-      "end": 394.4159,
-      "text": " Então basicamente esse é o tutorial, pessoal",
+      "id": 184,
+      "seek": 8658,
+      "start": 392.89432,
+      "end": 393.5343,
+      "text": " Então, basicamente,",
       "tokens": [
-        51037,
+        51094,
         6469,
+        11,
         3875,
         3439,
+        11,
+        51126
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 185,
+      "seek": 8658,
+      "start": 393.6343,
+      "end": 394.5143,
+      "text": " esse é o tutorial, tá, pessoal?",
+      "tokens": [
+        51131,
         6755,
         1136,
         277,
         7073,
         11,
+        7737,
+        11,
         24811,
-        51125
+        30,
+        51175
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 172,
-      "seek": 8744,
-      "start": 394.4159,
-      "end": 396.59592,
-      "text": " Se vocês gostaram desse vídeo, não esquece de deixar o like",
+      "id": 186,
+      "seek": 8658,
+      "start": 394.55432,
+      "end": 395.6343,
+      "text": " Se vocês gostaram desse vídeo, tá?",
       "tokens": [
-        51125,
+        51177,
         1100,
         10522,
         13188,
@@ -5230,29 +5454,47 @@
         17864,
         8071,
         11,
-        2431,
+        7737,
+        30,
+        51231
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
+    },
+    {
+      "id": 187,
+      "seek": 8658,
+      "start": 395.65433,
+      "end": 396.65433,
+      "text": " Não esquece de deixar o like,",
+      "tokens": [
+        51232,
+        8010,
         28147,
         384,
         368,
         19701,
         277,
         411,
-        51234
+        11,
+        51282
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 173,
-      "seek": 8744,
-      "start": 396.59592,
-      "end": 397.69592,
-      "text": " Se inscrever, isso ajuda bastante o canal",
+      "id": 188,
+      "seek": 8658,
+      "start": 396.75433,
+      "end": 397.77432,
+      "text": " se inscrever, isso ajuda bastante o canal.",
       "tokens": [
-        51234,
-        1100,
+        51287,
+        369,
         27824,
         331,
         11,
@@ -5261,21 +5503,22 @@
         14651,
         277,
         9911,
-        51289
+        13,
+        51338
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     },
     {
-      "id": 174,
-      "seek": 8744,
-      "start": 397.69592,
-      "end": 399.03592,
-      "text": " E vejo vocês no próximo vídeo",
+      "id": 189,
+      "seek": 8658,
+      "start": 397.9143,
+      "end": 399.0943,
+      "text": " E vejo vocês no próximo vídeo.",
       "tokens": [
-        51289,
+        51345,
         462,
         1241,
         5134,
@@ -5283,15 +5526,16 @@
         572,
         21177,
         8071,
-        51356
+        13,
+        51404
       ],
       "temperature": 0,
-      "avg_logprob": -0.09495912,
-      "compression_ratio": 1.6612378,
-      "no_speech_prob": 0.002148432
+      "avg_logprob": -0.15685678,
+      "compression_ratio": 1.6936417,
+      "no_speech_prob": 0.008056692
     }
   ],
   "x_groq": {
-    "id": "req_01kdepj1kpf3vspsvyfacbrcs0"
+    "id": "req_01kdy12tgzezxbtetex3ehy3dv"
   }
 }
