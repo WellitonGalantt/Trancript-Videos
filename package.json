@@ -23,6 +23,8 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@remotion/bundler": "^4.0.399",
+    "@remotion/renderer": "^4.0.399",
     "@types/dotenv": "^6.1.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

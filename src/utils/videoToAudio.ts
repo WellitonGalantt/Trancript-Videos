@@ -1,11 +1,17 @@
 import { spawn } from "child_process";
 import path from "path";
 import fs from "fs/promises";
+import fsSync from "fs";
 
 //ffmpeg -i input.mp4 -vn -filter:a "atempo=1.5" -ac 1 -ar 16000 -c:a pcm_s16le output.wav
 
 export async function videoToAudio(videoPath: string): Promise<string | void> {
   const dir = path.resolve(process.cwd(), "test_files");
+
+  if (!fsSync.existsSync(dir)) {
+    fsSync.mkdirSync(dir, { recursive: true });
+  }
+
   const base = path.basename(videoPath, path.extname(videoPath));
   const outPath = path.join(dir, `${base}.x1.5.wav`);
 

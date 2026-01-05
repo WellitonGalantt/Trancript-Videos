@@ -1,0 +1,16 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "uploads/**",
+    "renders/**",
+    "test_files/**",
+    "transcript.json",
+    "../editvideo/**",
+    "**/.cache/**",
+    "**/.remotion/**",
+    "**/node_modules/**"
+  ],
+  "ext": "ts,js,json"
+}
